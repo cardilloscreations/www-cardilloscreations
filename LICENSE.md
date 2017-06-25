@@ -1,1 +1,1 @@
-While some technology used to build this site it open source, this site itself contains material that is Copyright by Ray Cardillos of Cardillo's Creations circa 2008 and beyond.
+While some of the services and technology used to build this site is open source, this site itself contains material that is commercial and proprietary. With the exception of any open source or third party content, the majority of the content is Copyright circa 2008 until present by Ray Cardillo of Cardillo's Creations. Such content cannot be used without documenting explicit consent.
