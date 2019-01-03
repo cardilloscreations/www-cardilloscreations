@@ -1,12 +1,12 @@
 # Data for the Cardillo's Creations Website
 
-This is the data used to generate my website: [Cardillo's Creations](https://www.cardilloscreations.com).The content is transformed by [Jekyll](https://github.com/mojombo/jekyll) into a static site whenever I push this repository to [GitHub](https://github.com) and it is hosted for free using [GitHub Pages](https://pages.github.com).
+This is the data used to generate my website: [Cardillo's Creations](https://www.cardilloscreations.com). The content is transformed by [Jekyll](https://github.com/mojombo/jekyll) into a static site whenever I push this repository to [GitHub](https://github.com) and it is hosted for free using [GitHub Pages](https://pages.github.com).
 
-So basically, thanks to GitHub, I'm able to host this website for free, and have backups and version control. Static content is not for everyone, but it's perfect for a blogs and websites like this.
+So basically, thanks to GitHub, I'm able to host this website for free, and have backups and version control. Static content is not for everyone, but it's perfect for the tech savvy folks running blogs and websites like this.
 
 ### Warning - Work In Progress
 
-**Please do not use this site as an example of best practices with Jekyll.** I had to rush through a manual recovery operation to rebuild the site from a snapshot on [archive.org](https://archive.org/web) after I accidentally lost my hosting account during a relocation. The site was previously a WordPress site with a commercial theme and lots of extras so I'm slowly updating it to follow best practices as I need more going forward. In the meantime, it's more of a mashup than a properly designed Jekyll site.
+**Please do not use this site as an example of best practices with Jekyll.** I had to rush through a manual recovery operation to rebuild my site from a snapshot on [archive.org](https://archive.org/web) after I accidentally lost my hosting account during a relocation. The site was previously a WordPress site with a commercial theme and lots of extras so I'm slowly updating it to follow best practices as I need more going forward. In the meantime, it's more of a mashup than a properly designed Jekyll site.
 
 ### Services Used
 
@@ -24,6 +24,6 @@ So basically, thanks to GitHub, I'm able to host this website for free, and have
 
 ### License & Copyright
 
-While Jekyll itself is open source, and some services may be as well, all other content is proprietary. The styling is actually a quickly ported version of a commercial Wordpress theme (Grizzly) which requires a license to use. Everything else is Copyright Ray Cardillo (*doing business as Cardillo's Creations*).
+While Jekyll itself is open source, and I'm using several free services as well, all of this content is proprietary. The styling is actually a quickly ported version of a commercial Wordpress theme (Grizzly) that requires a license to use, which I have obtained. Everything else is Copyright since 2018 by Raymond Cardillo (*doing business as Cardillo's Creations*).
 
-You may not reuse any of this proprietary or Copyright content without my explicit permission (e.g., index.html, images, app, apps, data, stylesheets).
+You may not reuse any of this proprietary or Copyright content without my explicit permission (e.g., html, images, text, stylesheets).
