@@ -1217,6 +1217,11 @@ section.sub-section {
 	letter-spacing: 1px;
 	font-size: 36px;
 }
+#page-subtitle {
+	margin: 0 auto;
+	letter-spacing: 1px;
+	font-size: 24px;
+}
 #page-tagline {
 	font-size: 15px;
 	line-height: 20px;

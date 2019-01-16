@@ -4,30 +4,25 @@ jQuery(document).ready(function($) {
 	jQuery.easing.def = 'easeOutQuad';
 
 	// Show App Dock after Loaded
-	if ( !$.browser.msie ){
-		var app_dock_imgs_load = $('#app-dock').imagesLoaded();
-		app_dock_imgs_load.always( function( $images ){
-		  $('#app-dock').animate({
-		  	opacity: 1
-		  }, 600);
-		});
-	} else {
-		$('#app-dock').css('opacity', 1);
-	}
-
+    var app_dock_imgs_load = $('#app-dock').imagesLoaded();
+    app_dock_imgs_load.always(function ($images) {
+        $('#app-dock').animate({
+            opacity: 1
+        }, 600);
+    });
 	// App Dock
 	var slide_distance = $('.app-icon').outerWidth(true);
 	var slide_speed = slide_distance * 1.5; 
 	var fade_speed = slide_distance / 2;
 	var icon_height = $('.app-icon img').outerHeight();
-	var app_amount = $('.app-pack .app-icon').size();
+	var app_amount = $('.app-pack .app-icon').length;
 	
 	function app_variable_init() {
 		slide_distance = $('.app-icon').outerWidth(true);
 		slide_speed = slide_distance * 1.5; 
 		fade_speed = slide_distance / 2;
 		icon_height = $('.app-icon img').outerHeight();
-		app_amount = $('.app-pack .app-icon').size();
+		app_amount = $('.app-pack .app-icon').length;
 	}
 
 	// Init
@@ -109,7 +104,7 @@ jQuery(document).ready(function($) {
 		app_variable_init();
 		$('.app-info-balloon-active').css('opacity', 0).css('bottom', icon_height).removeClass('app-info-balloon-active');
 		// Check that next app icon exist
-		if( $('.app-icon-active:last').next().size() == 0 ) {
+		if( $('.app-icon-active:last').next().length == 0 ) {
 			$('.app-icon:first').appendTo('.app-pack');
 			var active_index = -$('.app-icon-active:first').index();
 			$('.app-pack').css('left', active_index * slide_distance + 'px');
@@ -139,7 +134,7 @@ jQuery(document).ready(function($) {
 		app_variable_init();
 		$('.app-info-balloon-active').css('opacity', 0).css('bottom', icon_height).removeClass('app-info-balloon-active');
 		// Check that next app icon exist
-		if( $('.app-icon-active:first').prev().size() == 0 ) {
+		if( $('.app-icon-active:first').prev().length == 0 ) {
 			$('.app-icon:last').prependTo('.app-pack');
 			
 			var active_index = -$('.app-icon-active:first').index();

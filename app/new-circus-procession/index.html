@@ -4,237 +4,235 @@ title: New Circus Procession
 
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
+
 <head>
-<meta charset="UTF-8" />
-<title>{{ page.title }} | Cardillo&#039;s CreationsCardillo&#039;s Creations</title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | Cardillo&#039;s CreationsCardillo&#039;s Creations</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 
-	{% include style.html %}
+    {% include css.html %}
 
 </head>
-<body class="single single-app postid-341 mat-off table-on header-light footer-dark show-space-light"  >
 
-	{% include header.html %}
+<body class="single single-app postid-341 mat-off table-on header-light footer-dark show-space-light">
 
-	<section id="show-space">
+    {% include header.html %}
 
-	<style type="text/css" scoped>
+    <section id="show-space">
 
-	/* Background */
+        <style type="text/css" scoped>
+            /* Background */
 
-	/* Layout Override */
+            /* Layout Override */
+        </style>
 
-	</style>
+        <script type="text/javascript">
+            //<![CDATA[
 
-	<script type="text/javascript">
-	//<![CDATA[
+            jQuery(document).ready(function($) {
 
-		jQuery(document).ready(function($) {
+                $('#screen.flexslider').flexslider({
+                    animation: 'slide',
+                    slideDirection: 'horizontal',
+                    animationSpeed: 500,
+                    slideshowSpeed: 3500,
+                    slideshow: true,
+                    controlNav: false
+                });
 
-			$('#screen.flexslider').flexslider({
-				animation: 'slide',
-				slideDirection: 'horizontal',
-				animationSpeed: 500,
-				slideshowSpeed: 3500,
-				slideshow: true,
-				controlNav: false
-			});
+                // Badge
+                $('.application-market-link .button').mouseenter(function() {
+                    $('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
+                        top: 10
+                    }, 300, 'easeOutQuad');
+                }).mouseleave(function() {
+                    $('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
+                        top: 110
+                    }, 300, 'easeOutQuad');
+                });
 
-							// Badge
-				$('.application-market-link .button').mouseenter( function(){
-					$('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
-						top: 10
-					}, 300, 'easeOutQuad');
-				}).mouseleave( function(){
-					$('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
-						top: 110
-					}, 300, 'easeOutQuad');
-				});
+                // Retina
+                if (document.documentElement.clientWidth > 750) {
+                    $('.retina').retina({
+                        preload: true,
+                        css: {
+                            'z-index': 9999
+                        }
+                    });
+                }
 
-			// Retina
-			if (document.documentElement.clientWidth > 750) {
-				$('.retina').retina({preload: true, css:{ 'z-index': 9999}});
-			}
+                // Show Application Box after Loaded
+                if (!$.browser.msie) {
+                    var app_box_imgs_load = $('.application-box').imagesLoaded();
+                    app_box_imgs_load.always(function($images) {
+                        $('.application-box').animate({
+                            opacity: 1
+                        }, 600);
+                    });
+                } else {
+                    $('.application-box').css('opacity', 1);
+                }
 
-			// Show Application Box after Loaded
-			if ( !$.browser.msie ){
-				var app_box_imgs_load = $('.application-box').imagesLoaded();
-				app_box_imgs_load.always( function( $images ){
-				  $('.application-box').animate({
-				  	opacity: 1
-				  }, 600);
-				});
-			} else {
-				$('.application-box').css('opacity', 1);
-			}
+            });
+            //]]>
+        </script>
 
-		});
-	//]]>
-	</script>
+        <div id="cinema-landscape-box" class="application-box clearfix landscape cinema container">
 
-    <div id="cinema-landscape-box" class="application-box clearfix landscape cinema container">
+            <div id="application-info-box">
 
-	        <div id="application-info-box">
+                <img id="apps-icon" src="images/newcircusprocession-120-64x64.png" />
 
-	        	<img id="apps-icon" src="images/newcircusprocession-120-64x64.png" />
+                <h1 id="apps-title">
+                    New Circus Procession
+                </h1>
 
-	            	            	<h1 id="apps-title">
-	            			            			New Circus Procession	            			            	</h1>
+                <div id="showcase-info">
+                    <p>A charming vintage circus illustration, digitally restored, and re-imagined as an interactive read-along.</p>
+                </div>
 
-	            <div id="showcase-info">
-	                	                	<p>A charming vintage circus illustration, digitally restored, and re-imagined as an interactive read-along.</p>
-	                	            </div>
+                <!-- Button #1 -->
+                <div class="application-market-link">
+                    <div class="button action-button black google-play-button ">
+                        <a href="https://play.google.com/store/apps/details?id=com.cardilloscreations.ebooks.vintage.newcircusprocession"> <span>FREE <small>on Google Play</small></span><span class="icon-mask"></span>
+                        </a>
+                    </div>
 
-	            <!-- Button #1 -->
-	            	            <div class="application-market-link">
-	            	<div class="button action-button black google-play-button ">
+                    <div class="qr-price">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.cardilloscreations.ebooks.vintage.newcircusprocession&size=100x100" alt="qr-code" />
+                    </div>
+                </div>
 
-	            		<a href="https://play.google.com/store/apps/details?id=com.cardilloscreations.ebooks.vintage.newcircusprocession">	            		<span>FREE <small>on Google Play</small></span><span class="icon-mask"></span>
-	            		</a>
-	            	</div>
+                <!-- Button #2 -->
+                <div class="application-market-link last">
+                    <div class="button action-button black amazon-button ">
+                        <a href="http://www.amazon.com/Cardillos-Creations-LLC-Circus-Procession/dp/B00GN1ITLC/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1387075561&sr=1-1"> <span>FREE <small>on Amazon</small></span><span class="icon-mask"></span>
+                        </a>
+                    </div>
 
-	            	<div class="qr-price">
-            			            				<img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.cardilloscreations.ebooks.vintage.newcircusprocession&size=100x100" alt="qr-code" />
-            			            		</div>
-	        	</div>
+                    <div class="qr-price">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fwww.amazon.com%2FCardillos-Creations-LLC-Circus-Procession%2Fdp%2FB00GN1ITLC%2Fref%3Dsr_1_1%3Fs%3Dmobile-apps%26ie%3DUTF8%26qid%3D1387075561%26sr%3D1-1n&size=100x100" alt="qr-code" />
+                    </div>
+                </div>
 
-	       		<!-- Button #2 -->
-	        		            <div class="application-market-link last">
-	            	<div class="button action-button black amazon-button ">
+                <!-- Button #3 -->
+                <div class="application-market-link last">
+                    <div class="button action-button black apple-button ">
+                        <a href="https://itunes.apple.com/us/app/new-circus-procession/id783293323?mt=8"> <span>FREE <small>on App Store</small></span><span class="icon-mask"></span>
+                        </a>
+                    </div>
 
-	            		<a href="http://www.amazon.com/Cardillos-Creations-LLC-Circus-Procession/dp/B00GN1ITLC/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1387075561&sr=1-1">	            		<span>FREE <small>on Amazon</small></span><span class="icon-mask"></span>
-	            		</a>
-	            	</div>
+                    <div class="qr-price">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fnew-circus-procession%2Fid783293323%3Fmt%3D8&size=100x100" alt="qr-code" />
+                    </div>
+                </div>
 
-	            	<div class="qr-price">
-            			            				<img src="https://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fwww.amazon.com%2FCardillos-Creations-LLC-Circus-Procession%2Fdp%2FB00GN1ITLC%2Fref%3Dsr_1_1%3Fs%3Dmobile-apps%26ie%3DUTF8%26qid%3D1387075561%26sr%3D1-1n&size=100x100" alt="qr-code" />
-            			            		</div>
-	        	</div>
+            </div><!-- #application-info-box -->
 
-	       		<!-- Button #3 -->
-	        		            <div class="application-market-link last">
-	            	<div class="button action-button black apple-button ">
+            <div id="device-box">
+                <div id="device">
+                    <div id="screen">
+                        <iframe width="462" height="260" src="https://www.youtube.com/embed/Y3zmgsNi6gw?rel=0&autohide=1&egm=1&modestbranding=1&showinfo=0&wmode=opaque" frameborder="0" allowfullscreen controls="0" wmode="opaque"></iframe>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="shadow-left"></div>
+                    <div class="shadow-body"></div>
+                    <div class="shadow-right"></div>
+                </div>
+            </div><!-- #device-box -->
 
-	            		<a href="https://itunes.apple.com/us/app/new-circus-procession/id783293323?mt=8">	            		<span>$0.99 <small>on App Store</small></span><span class="icon-mask"></span>
-	            		</a>
-	            	</div>
+        </div><!-- #application-box -->
 
-	            	<div class="qr-price">
-            			            				<img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fnew-circus-procession%2Fid783293323%3Fmt%3D8&size=100x100" alt="qr-code" />
-            			            		</div>
-	        	</div>
+        <div id="show-space-shadow"></div>
+        <div id="pattern"></div>
 
+    </section> <!-- #show-space -->
 
-	        </div><!-- #application-info-box -->
-
-
-	        <div id="device-box">
-	        	<div id="device">
-
-	        	    	        	    	<div id="screen">
-
-	        	    			        	    			<iframe width="462" height="260" src="https://www.youtube.com/embed/Y3zmgsNi6gw?rel=0&autohide=1&egm=1&modestbranding=1&showinfo=0&wmode=opaque" frameborder="0" allowfullscreen controls="0" wmode="opaque"></iframe>
-
-
-	        	    	</div>
-
-	        	    	        	</div>
-	        	<div class="shadow">
-	        		<div class="shadow-left"></div>
-	        		<div class="shadow-body"></div>
-	        		<div class="shadow-right"></div>
-	        	</div>
-	        </div><!-- #device-box -->
-
-    </div><!-- #application-box -->
-
-	<div id="show-space-shadow"></div>
-	<div id="pattern"></div>
-
-</section> <!-- #show-space -->
-
-<!-- TABLE -->
-	<!-- Board & Mat -->
-	<section id="table-wrap">
-		<div id="table-top">
-			<div id="table-top-shadow">
-		    	<div id="table-mat-top-wrap">
-			    	<div id="table-mat-top-texture"></div>
-			    	<div id="table-mat-top"></div>
-		    	</div>
-		    </div>
-		</div>
-	    <div id="table-border">
-	 		<div class="border-bottom-line"></div>
-	    	<div id="table-border-shadow">
-		    	<div id="table-mat-body-wrap-outer">
-			    	<div id="table-mat-body-wrap">
-			    		<div class="border-bottom-line"></div>
-			    		<div id="table-mat-body"></div>
-			    	</div>
-		    	</div>
-	    	</div>
-	    </div>
-	    <div id="table-shadow"></div>
-	</section><!-- #table-wrap -->
-<!-- END TABLE -->
+    <!-- TABLE -->
+    <!-- Board & Mat -->
+    <section id="table-wrap">
+        <div id="table-top">
+            <div id="table-top-shadow">
+                <div id="table-mat-top-wrap">
+                    <div id="table-mat-top-texture"></div>
+                    <div id="table-mat-top"></div>
+                </div>
+            </div>
+        </div>
+        <div id="table-border">
+            <div class="border-bottom-line"></div>
+            <div id="table-border-shadow">
+                <div id="table-mat-body-wrap-outer">
+                    <div id="table-mat-body-wrap">
+                        <div class="border-bottom-line"></div>
+                        <div id="table-mat-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="table-shadow"></div>
+    </section><!-- #table-wrap -->
+    <!-- END TABLE -->
 
     <section id="body">
         <div id="body-wrap" class="container">
-        	<div id="body-content" class="rtf">
+            <div id="body-content" class="rtf">
 
-        	<h3 class="section-title section-title-center">A charming digitally restored vintage circus illustration with modern interactive features. Includes professionally narrated read-along, fun sound effects, and more. Entertaining for adults and readers of all ages.</h3>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<h2 class="section-title  section-lined"><span>Background</span></h2>
-<p>Originally printed in 1888 by McLoughlin Brothers of New York, this interactive book takes us back to the days when circuses paraded through towns before setting up their Big Top in preparation for the show. The rhythmic stanzas establish the beat of a procession and include all of the acts you&#8217;d expect to see in a circus of the era. The original vintage style illustrations were digitally restored and then combined with modern features that both entertain and promote reading, making the experience appealing to readers of all ages.</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<h2 class="section-title  section-lined"><span>Features</span></h2>
-<p>Features that help promote and reinforce reading skills in younger children:</p>
-<div class="list-set type-1 list-red">
-<ul>
-<li>Words are highlighted in narration mode as the stanzas are read aloud.</li>
-<li>Words can be touched individually to hear only that word read aloud.</li>
-<li>Words and sounds appear with most illustration touch points.</li>
-<li>Fun sound effects are hidden throughout the illustrations.</li>
-</ul>
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<h2 class="section-title  section-lined"><span>More Details</span></h2>
-<p>Features that help promote and reinforce reading skills in younger children:</p>
-<div class="list-set type-1 list-red">
-<ul>
-<li>Contains 330+ spoken words and 80+ different sound effects.</li>
-<li>Illustrations are digitally restored and app maintains vintage style graphics.</li>
-<li>Full orchestral version of the classic circus song &#8220;Entrance of Gladiators&#8221;.</li>
-<li>Derived from &#8220;The Circus Procession&#8221; (originally printed in 1888 by McLoughlin Brothers of New York).</li>
-</ul>
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<h2 class="section-title section-title-center section-lined"><span>Privacy Policy</span></h2>
-<div style="width: 100%; text-align: center; padding: 0; margin: 0;"><a href="NewCircusProcession-PrivacyPolicy.pdf"><img style="margin: -15px 0 0 0; padding: 0; width: 75%;" alt="New Circus Procession - Privacy Policy" src="images/NewCircusProcession-PrivacyIcon.png"/></a></div>
-<div style="width: 100%; margin-top: -15px; margin-bottom: 20px; text-align: center;">( click image for full details )</div>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
+                <h3 class="section-title section-title-center">A charming digitally restored vintage circus illustration with modern interactive features. Includes professionally narrated read-along, fun sound effects, and more. Entertaining for adults and readers of all ages.</h3>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <h2 class="section-title section-lined"><span>Background</span></h2>
+                <p>Originally printed in 1888 by McLoughlin Brothers of New York, this interactive book takes us back to the days when circuses paraded through towns before setting up their Big Top in preparation for the show. The rhythmic stanzas establish the beat of a procession and include all of the acts you&#8217;d expect to see in a circus of the era. The original vintage style illustrations were digitally restored and then combined with modern features that both entertain and promote reading, making the experience appealing to readers of all ages.</p>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <h2 class="section-title section-lined"><span>Features</span></h2>
+                <p>Features that help promote and reinforce reading skills in younger children:</p>
+                <div class="list-set type-1 list-red">
+                    <ul>
+                        <li>Words are highlighted in narration mode as the stanzas are read aloud.</li>
+                        <li>Words can be touched individually to hear only that word read aloud.</li>
+                        <li>Words and sounds appear with most illustration touch points.</li>
+                        <li>Fun sound effects are hidden throughout the illustrations.</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <h2 class="section-title section-lined"><span>More Details</span></h2>
+                <p>Features that help promote and reinforce reading skills in younger children:</p>
+                <div class="list-set type-1 list-red">
+                    <ul>
+                        <li>Contains 330+ spoken words and 80+ different sound effects.</li>
+                        <li>Illustrations are digitally restored and app maintains vintage style graphics.</li>
+                        <li>Full orchestral version of the classic circus song &#8220;Entrance of Gladiators&#8221;.</li>
+                        <li>Derived from &#8220;The Circus Procession&#8221; (originally printed in 1888 by McLoughlin Brothers of New York).</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <h2 class="section-title section-lined"><span>Privacy Policy</span></h2>
+                <p><a href="privacy.html">Privacy Policy</a> - The full privacy policy for this app.</p>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
 
-        	</div><!-- #body-content -->
+            </div><!-- #body-content -->
         </div><!-- #body-wrap -->
     </section><!-- #body -->
 
-		{% include footer.html %}
-		{% include google-analytics.html %}
+    {% include footer.html %}
+    
+    {% include javascript.html %}
+    {% include google-analytics.html %}
 
 </body>
+
 </html>

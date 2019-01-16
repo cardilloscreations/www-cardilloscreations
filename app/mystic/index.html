@@ -4,224 +4,232 @@ title: Mystic
 
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
+
 <head>
-<meta charset="UTF-8" />
-<title>{{ page.title }} | Cardillo&#039;s CreationsCardillo&#039;s Creations</title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | Cardillo&#039;s CreationsCardillo&#039;s Creations</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 
-	{% include style.html %}
+    {% include css.html %}
 
 </head>
-<body class="single single-app postid-234 mat-off table-on header-light footer-dark show-space-light"  >
 
-	{% include header.html %}
+<body class="single single-app postid-234 mat-off table-on header-light footer-dark show-space-light">
 
-	<section id="show-space">
+    {% include header.html %}
 
-	<style type="text/css" scoped>
+    <section id="show-space">
 
-	/* Background */
+        <style type="text/css" scoped>
+            /* Background */
 
-	/* Layout Override */
+            /* Layout Override */
+        </style>
 
-	</style>
+        <script type="text/javascript">
+            //<![CDATA[
 
-	<script type="text/javascript">
-	//<![CDATA[
+            jQuery(document).ready(function($) {
 
-		jQuery(document).ready(function($) {
+                $('#screen.flexslider').flexslider({
+                    animation: 'slide',
+                    slideDirection: 'horizontal',
+                    animationSpeed: 500,
+                    slideshowSpeed: 3500,
+                    slideshow: true,
+                    controlNav: false
+                });
 
-			$('#screen.flexslider').flexslider({
-				animation: 'slide',
-				slideDirection: 'horizontal',
-				animationSpeed: 500,
-				slideshowSpeed: 3500,
-				slideshow: true,
-				controlNav: false
-			});
+                // Badge
+                $('.application-market-link .button').mouseenter(function() {
+                    $('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
+                        top: 10
+                    }, 300, 'easeOutQuad');
+                }).mouseleave(function() {
+                    $('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
+                        top: 110
+                    }, 300, 'easeOutQuad');
+                });
 
-							// Badge
-				$('.application-market-link .button').mouseenter( function(){
-					$('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
-						top: 10
-					}, 300, 'easeOutQuad');
-				}).mouseleave( function(){
-					$('.qr-price img', $(this).parent('.application-market-link')).stop().animate({
-						top: 110
-					}, 300, 'easeOutQuad');
-				});
+                // Retina
+                if (document.documentElement.clientWidth > 750) {
+                    $('.retina').retina({
+                        preload: true,
+                        css: {
+                            'z-index': 9999
+                        }
+                    });
+                }
 
-			// Retina
-			if (document.documentElement.clientWidth > 750) {
-				$('.retina').retina({preload: true, css:{ 'z-index': 9999}});
-			}
+                // Show Application Box after Loaded
+                if (!$.browser.msie) {
+                    var app_box_imgs_load = $('.application-box').imagesLoaded();
+                    app_box_imgs_load.always(function($images) {
+                        $('.application-box').animate({
+                            opacity: 1
+                        }, 600);
+                    });
+                } else {
+                    $('.application-box').css('opacity', 1);
+                }
 
-			// Show Application Box after Loaded
-			if ( !$.browser.msie ){
-				var app_box_imgs_load = $('.application-box').imagesLoaded();
-				app_box_imgs_load.always( function( $images ){
-				  $('.application-box').animate({
-				  	opacity: 1
-				  }, 600);
-				});
-			} else {
-				$('.application-box').css('opacity', 1);
-			}
+            });
+            //]]>
+        </script>
 
-		});
-	//]]>
-	</script>
+        <div id="iphone-portrait-box" class="application-box clearfix portrait iphone container">
 
-    <div id="iphone-portrait-box" class="application-box clearfix portrait iphone container">
+            <div id="application-info-box">
 
-	        <div id="application-info-box">
+                <img id="apps-icon" src="images/Mystic-Icon-64x64.png" />
 
-	        	<img id="apps-icon" src="images/Mystic-Icon-64x64.png" />
+                <h1 id="apps-title">
+                    Mystic </h1>
 
-	            	            	<h1 id="apps-title">
-	            			            			Mystic	            			            	</h1>
+                <div id="showcase-info">
+                    <p>Concentrate... ask a question... and watch in amazement as answers to your most challenging questions about life are revealed through what appears to be a mysterious liquid.</p>
+                </div>
 
-	            <div id="showcase-info">
-	                	                	<p>Concentrate... ask a question... and watch in amazement as answers to your most challenging questions about life are revealed through what appears to be a mysterious liquid.</p>
-	                	            </div>
+                <!-- Button #1 -->
+                <div class="application-market-link">
+                    <div class="button action-button black apple-button ">
 
-	            <!-- Button #1 -->
-	            	            <div class="application-market-link">
-	            	<div class="button action-button black apple-button ">
+                        <a href="https://itunes.apple.com/us/app/mystic/id303505522?mt=8"> <span>$0.99 <small>on App Store</small></span><span class="icon-mask"></span>
+                        </a>
+                    </div>
 
-	            		<a href="https://itunes.apple.com/us/app/mystic/id303505522?mt=8">	            		<span>$0.99 <small>on App Store</small></span><span class="icon-mask"></span>
-	            		</a>
-	            	</div>
+                    <div class="qr-price">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fmystic%2Fid303505522%3Fmt%3D8&size=100x100" alt="qr-code" />
+                    </div>
+                </div>
 
-	            	<div class="qr-price">
-            			            				<img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fmystic%2Fid303505522%3Fmt%3D8&size=100x100" alt="qr-code" />
-            			            		</div>
-	        	</div>
+                <!-- Button #2 -->
 
-	       		<!-- Button #2 -->
-
-	       		<!-- Button #2 -->
+                <!-- Button #2 -->
 
 
-	        </div><!-- #application-info-box -->
+            </div><!-- #application-info-box -->
 
 
-	        <div id="device-box">
-	        	<div id="device">
+            <div id="device-box">
+                <div id="device">
 
-	        	    	        	    <div id="screen" class="flexslider">
-	        	        <ul class="slides">
-	        	        	        	        	<li><img src="images/315-sshot-trippy-hippy.jpg" /></li>
-	        	        	        	        	<li><img src="images/315-sshot-finding-love.jpg" /></li>
-	        	        	        	        	<li><img src="images/315-sshot-coin-toss.jpg" /></li>
-	        	        	        	        	<li><img src="images/315-sshot-classic-red.jpg" /></li>
-	        	        	        	        	<li><img src="images/315-sshot-classic-blue.jpg" /></li>
-	        	        	        	        </ul>
-	        	    </div>
+                    <div id="screen" class="flexslider">
+                        <ul class="slides">
+                            <li><img src="images/315-sshot-trippy-hippy.jpg" /></li>
+                            <li><img src="images/315-sshot-finding-love.jpg" /></li>
+                            <li><img src="images/315-sshot-coin-toss.jpg" /></li>
+                            <li><img src="images/315-sshot-classic-red.jpg" /></li>
+                            <li><img src="images/315-sshot-classic-blue.jpg" /></li>
+                        </ul>
+                    </div>
 
-	        	    	        	</div>
-	        	<div class="shadow">
-	        		<div class="shadow-left"></div>
-	        		<div class="shadow-body"></div>
-	        		<div class="shadow-right"></div>
-	        	</div>
-	        </div><!-- #device-box -->
+                </div>
+                <div class="shadow">
+                    <div class="shadow-left"></div>
+                    <div class="shadow-body"></div>
+                    <div class="shadow-right"></div>
+                </div>
+            </div><!-- #device-box -->
 
-    </div><!-- #application-box -->
+        </div><!-- #application-box -->
 
-	<div id="show-space-shadow"></div>
-	<div id="pattern"></div>
+        <div id="show-space-shadow"></div>
+        <div id="pattern"></div>
 
-</section> <!-- #show-space -->
+    </section> <!-- #show-space -->
 
-<!-- TABLE -->
-	<!-- Board & Mat -->
-	<section id="table-wrap">
-		<div id="table-top">
-			<div id="table-top-shadow">
-		    	<div id="table-mat-top-wrap">
-			    	<div id="table-mat-top-texture"></div>
-			    	<div id="table-mat-top"></div>
-		    	</div>
-		    </div>
-		</div>
-	    <div id="table-border">
-	 		<div class="border-bottom-line"></div>
-	    	<div id="table-border-shadow">
-		    	<div id="table-mat-body-wrap-outer">
-			    	<div id="table-mat-body-wrap">
-			    		<div class="border-bottom-line"></div>
-			    		<div id="table-mat-body"></div>
-			    	</div>
-		    	</div>
-	    	</div>
-	    </div>
-	    <div id="table-shadow"></div>
-	</section><!-- #table-wrap -->
-<!-- END TABLE -->
+    <!-- TABLE -->
+    <!-- Board & Mat -->
+    <section id="table-wrap">
+        <div id="table-top">
+            <div id="table-top-shadow">
+                <div id="table-mat-top-wrap">
+                    <div id="table-mat-top-texture"></div>
+                    <div id="table-mat-top"></div>
+                </div>
+            </div>
+        </div>
+        <div id="table-border">
+            <div class="border-bottom-line"></div>
+            <div id="table-border-shadow">
+                <div id="table-mat-body-wrap-outer">
+                    <div id="table-mat-body-wrap">
+                        <div class="border-bottom-line"></div>
+                        <div id="table-mat-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="table-shadow"></div>
+    </section><!-- #table-wrap -->
+    <!-- END TABLE -->
 
     <section id="body">
         <div id="body-wrap" class="container">
-        	<div id="body-content" class="rtf">
+            <div id="body-content" class="rtf">
 
-        	<h3 class="section-title section-title-center">Watch in amazement as answers to your most challenging questions are revealed through a mysterious liquid. Use it as a personal decision maker, have friends ask questions together, or bring it to a party as a conversation starter.</h3>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<div class="box-wrap notice-box">
-<div class="box">
-<h5 style="color: #cc0000; text-align: center;">WARNING</h5>
-<p style="color: #cc0000;">
-<ol>
-<li>Experience has shown us that everyone is going to want their own turn&#8230; or two&#8230; or more.</li>
-<li>We are not responsible for anything that happens as a result of using Mystic for party games!</li>
-<li>Mystic is a random decision maker and has no ability to see into your future.</li>
-</ol>
-</div>
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<h2 class="section-title section-title-left section-lined"><span>Realistic Behavior</span></h2>
-<p>Mystic was designed to be a highly immersive application. The answers, particles, and bubbles float around and generally behave as expected using an advanced physics engine. Although shaking is supported, the more dramatic way to reveal a new answer is to turn it face down, concentrate on a question, and then turn it face up again.</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<p><img class="alignleft size-full wp-image-243" style="margin: 20px;" alt="Mystic - Classic Theme" src="images/315-theme-classic-red.jpg" width="210" height="315" /><br />
-<h2 class="section-title section-title-right section-lined"><span>Classic Themes</span></h2>
-<p>Classic answers that we all know and love! If you have seen a Magic Eight Ball then you should know what to expect from this theme. Available in your choice of color (Red, Green, or Blue).</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<p><img class="size-full wp-image-242 alignright" style="margin: 20px;" alt="Mystic - Finding Love Theme" src="images/315-theme-finding-love.jpg" width="210" height="315" /><br />
-<h2 class="section-title section-title-left section-lined"><span>Finding Love Theme</span></h2>
-<p>A charming heart based theme with answers that try to help you navigate the complexities of relationships and dating.</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<p><img class="alignleft size-full wp-image-243" style="margin: 20px;" alt="Mystic - Trippy Hippy Theme" src="images/315-theme-trippy-hippy.jpg" width="210" height="315" /><br />
-<h2 class="section-title section-title-right section-lined"><span>Trippy Hippy Theme</span></h2>
-<p>Psychedelic colors with answers inspired by the hippy culture of the 60s and 70s. This theme is a lot of fun at parties&#8230; or for anyone with a little leftover Flower Power.</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
-<p><img class="alignright size-full wp-image-241" style="margin: 20px;" alt="Mystic - Coin Toss Theme" src="images/315-theme-coin-toss.jpg" width="210" height="315" /><br />
-<h2 class="section-title section-title-left section-lined"><span>Coin Toss Theme</span></h2>
-<p>Realistic U.S. quarters (coins) afloat in the Mystic waters! All fifty states are included. Heads and tails are equally represented for a true 50% chance of heads versus tails.</p>
-<div class="clear"></div>
-<div class="clear"></div>
-<div class="space"></div>
+                <h3 class="section-title section-title-center">Watch in amazement as answers to your most challenging questions are revealed through a mysterious liquid. Use it as a personal decision maker, have friends ask questions together, or bring it to a party as a conversation starter.</h3>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <div class="box-wrap notice-box">
+                    <div class="box">
+                        <h5 style="color: #cc0000; text-align: center;">WARNING</h5>
+                        <p style="color: #cc0000;">
+                            <ol>
+                                <li>Experience has shown us that everyone is going to want their own turn&#8230; or two&#8230; or more.</li>
+                                <li>We are not responsible for anything that happens as a result of using Mystic for party games!</li>
+                                <li>Mystic is a random decision maker and has no ability to see into your future.</li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <h2 class="section-title section-title-left section-lined"><span>Realistic Behavior</span></h2>
+                <p>Mystic was designed to be a highly immersive application. The answers, particles, and bubbles float around and generally behave as expected using an advanced physics engine. Although shaking is supported, the more dramatic way to reveal a new answer is to turn it face down, concentrate on a question, and then turn it face up again.</p>
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="space"></div>
+                <p><img class="alignleft size-full wp-image-243" style="margin: 20px;" alt="Mystic - Classic Theme" src="images/315-theme-classic-red.jpg" width="210" height="315" /><br />
+                    <h2 class="section-title section-title-right section-lined"><span>Classic Themes</span></h2>
+                    <p>Classic answers that we all know and love! If you have seen a Magic Eight Ball then you should know what to expect from this theme. Available in your choice of color (Red, Green, or Blue).</p>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="space"></div>
+                    <p><img class="size-full wp-image-242 alignright" style="margin: 20px;" alt="Mystic - Finding Love Theme" src="images/315-theme-finding-love.jpg" width="210" height="315" /><br />
+                        <h2 class="section-title section-title-left section-lined"><span>Finding Love Theme</span></h2>
+                        <p>A charming heart based theme with answers that try to help you navigate the complexities of relationships and dating.</p>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                        <div class="space"></div>
+                        <p><img class="alignleft size-full wp-image-243" style="margin: 20px;" alt="Mystic - Trippy Hippy Theme" src="images/315-theme-trippy-hippy.jpg" width="210" height="315" /><br />
+                            <h2 class="section-title section-title-right section-lined"><span>Trippy Hippy Theme</span></h2>
+                            <p>Psychedelic colors with answers inspired by the hippy culture of the 60s and 70s. This theme is a lot of fun at parties&#8230; or for anyone with a little leftover Flower Power.</p>
+                            <div class="clear"></div>
+                            <div class="clear"></div>
+                            <div class="space"></div>
+                            <p><img class="alignright size-full wp-image-241" style="margin: 20px;" alt="Mystic - Coin Toss Theme" src="images/315-theme-coin-toss.jpg" width="210" height="315" /><br />
+                                <h2 class="section-title section-title-left section-lined"><span>Coin Toss Theme</span></h2>
+                                <p>Realistic U.S. quarters (coins) afloat in the Mystic waters! All fifty states are included. Heads and tails are equally represented for a true 50% chance of heads versus tails.</p>
+                                <div class="clear"></div>
+                                <div class="clear"></div>
+                                <div class="space"></div>
 
-        	</div><!-- #body-content -->
+            </div><!-- #body-content -->
         </div><!-- #body-wrap -->
     </section><!-- #body -->
 
-		{% include footer.html %}
-		{% include google-analytics.html %}
+    {% include footer.html %}
+    
+    {% include javascript.html %}
+    {% include google-analytics.html %}
 
 </body>
+
 </html>

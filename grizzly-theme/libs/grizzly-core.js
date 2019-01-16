@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 			var list = $("ul", this).filter(function(){
 				return $(this).css("visibility") == "visible";
 			});
-			var delay = 200 * (list.size()-1);
+			var delay = 200 * (list.length-1);
 			$("> ul", this).stop().delay(delay).animate({opacity: 0}, 200, function(){
 				$(this).css("visibility", "hidden");
 			});
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
 			var list = $("ul", this).filter(function(){
 				return $(this).css("visibility") == "visible";
 			});
-			var delay = 200 * (list.size()-1);
+			var delay = 200 * (list.length-1);
 			$("> ul", this).stop().delay(delay).animate({opacity: 0}, 200, function(){
 				$(this).css("visibility", "hidden");
 			});

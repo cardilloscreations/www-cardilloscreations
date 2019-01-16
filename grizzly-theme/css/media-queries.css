@@ -37,7 +37,8 @@
 	/* Page Header */
 	#page-header { text-align: center; }
 	#page-title { font-size: 30px; }
-	
+    #page-subtitle { font-size: 20px; }
+    
 	/* Body */
 	#main-content {
 		width: 100%;
@@ -335,7 +336,8 @@
 	/* Page Header */
 	#page-header { text-align: center; }
 	#page-title { font-size: 30px; }
-	
+    #page-subtitle { font-size: 20px; }
+    
 	/* Body */
 	#main-content { width: 530px; }
 	#main-content img {

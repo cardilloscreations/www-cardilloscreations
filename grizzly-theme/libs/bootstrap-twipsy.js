@@ -39,16 +39,14 @@
 
     // set CSS transition event type
     if ( $.support.transition ) {
-      transitionEnd = "TransitionEnd"
-      if ( $.browser.webkit ) {
-      	transitionEnd = "webkitTransitionEnd"
-      } else if ( $.browser.mozilla ) {
-      	transitionEnd = "transitionend"
-      } else if ( $.browser.opera ) {
-      	transitionEnd = "oTransitionEnd"
-      }
-    }
+        var transEndEventNames = {
+            'WebkitTransition' : 'webkitTransitionEnd', // Saf 6, Android Browser
+            'MozTransition'    : 'transitionend',       // only for FF < 15
+            'transition'       : 'transitionend'        // IE10, Opera, Chrome, FF 15+, Saf 7+
+        };
 
+        transitionEnd = transEndEventNames[ Modernizr.prefixed('transition') ];
+    }
   })
 
 
