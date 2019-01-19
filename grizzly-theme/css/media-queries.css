@@ -3,7 +3,7 @@
 
 @media only screen and (max-width: 767px) {
 	
-	.container { width: 290px; }
+	.container { width: 96%; }
 	#body { background: #FFF !important; }
 
 
@@ -305,7 +305,7 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media screen and (min-width:768px) and (max-width:1140px) {
 
-	.container { width: 720px; }
+	.container { width: 96%; }
 	
 	/* Customize Box */
 	#customize-box,
