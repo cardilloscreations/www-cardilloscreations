@@ -28,12 +28,32 @@ title: Home
             // Apps Slide Variable
             var apps_count = 3;
             var apps_show = 4;
+
         </script>
 
         <script type="text/javascript" src="/grizzly-theme/libs/grizzly-app-dock.js"></script>
 
         <div id="app-dock" class="clearfix app-dock-3">
             <div class="app-pack">
+
+                <div class="app-icon">
+                    <a href="/app/tempo-tutor-toon/" class="app-balloon-toggle-link">
+                        <img src="/app/tempo-tutor-toon/images/icon.png" width="120px" height="120px" />
+                    </a>
+
+                    <div class="app-info-balloon">
+                        <div class="app-title">TempoTutor-Toon</div>
+                        <div class="balloon-tail"></div>
+                    </div>
+                    <!-- .app-info-balloon" -->
+
+                    <div class="shadow">
+                        <div class="shadow-left"></div>
+                        <div class="shadow-body"></div>
+                        <div class="shadow-right"></div>
+                    </div>
+                </div>
+                <!-- .app-icon -->
 
                 <div class="app-icon">
                     <a href="/app/new-circus-procession/" class="app-balloon-toggle-link">
@@ -150,35 +170,43 @@ title: Home
                     <div class="space"></div>
                     <h3 class="section-title  section-lined"><span>Featured Apps</span></h3>
                     <div class="one_third ">
-                        <div class="app-frame">
-                            <div class="photo-frame icon-watch"><a href="/app/new-circus-procession/"><img src="/app/new-circus-procession/images/featured.png" alt="New Circus Procession" title="New Circus Procession" rel="tip" /></a>
+                        <div class="app-frame feature-image">
+                            <div class="photo-frame icon-watch">
+                                <a href="/app/tempo-tutor-toon/">
+                                    <img src="/app/tempo-tutor-toon/images/featured.png" alt="TempoTutor-Toon" title="TempoTutor-Toon" rel="tip" />
+                                </a>
                                 <div class="photo-frame-shadow"></div>
                             </div>
-                            <div class="app-info"><img src="/app/new-circus-procession/images/newcircusprocession-120-56x56.png" />
-                                <div class="title"><a href="/app/new-circus-procession/">New Circus Procession</a></div>
+                            <div class="app-info">
+                                <img src="/app/tempo-tutor-toon/images/icon.png" />
+                                <div class="title"><a href="/app/tempo-tutor-toon/">TempoTutor-Toon</a></div>
                                 <div class="category">android / iOS / multiplatform</div>
                             </div>
                         </div>
                     </div>
                     <div class="one_third ">
-                        <div class="app-frame">
+                        <div class="app-frame feature-image">
+                            <div class="photo-frame icon-watch">
+                                <a href="/app/new-circus-procession/">
+                                    <img src="/app/new-circus-procession/images/featured.png" alt="New Circus Procession" title="New Circus Procession" rel="tip" />
+                                </a>
+                                <div class="photo-frame-shadow"></div>
+                            </div>
+                            <div class="app-info">
+                                <img src="/app/new-circus-procession/images/newcircusprocession-120-56x56.png" />
+                                <div class="title"><a href="/app/new-circus-procession/">New Circus Procession</a></div>
+                                <div class="category">android / iOS / multiplatform</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one_third last">
+                        <div class="app-frame feature-image">
                             <div class="photo-frame icon-watch"><a href="/app/mystic/"><img src="/app/mystic/images/featured.png" alt="Mystic" title="Mystic" rel="tip" /></a>
                                 <div class="photo-frame-shadow"></div>
                             </div>
                             <div class="app-info"><img src="/app/mystic/images/Mystic-Icon-56x56.png" />
                                 <div class="title"><a href="/app/mystic/">Mystic</a></div>
                                 <div class="category">iOS</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="one_third last">
-                        <div class="app-frame">
-                            <div class="photo-frame icon-watch"><a href="/app/eyez/"><img src="/app/eyez/images/featured.png" alt="eyeZ" title="eyeZ" rel="tip" /></a>
-                                <div class="photo-frame-shadow"></div>
-                            </div>
-                            <div class="app-info"><img src="/app/eyez/images/icon-240-56x56.png" />
-                                <div class="title"><a href="/app/eyez/">eyeZ</a></div>
-                                <div class="category">android</div>
                             </div>
                         </div>
                     </div>
@@ -198,7 +226,7 @@ title: Home
     <!-- #body -->
 
     {% include footer.html %}
-    
+
     {% include javascript.html %}
     {% include google-analytics.html %}
 
