@@ -1,0 +1,48 @@
+google.com, pub-5781531207509232, DIRECT, f08c47fec0942fa0
+adtech.com, 4596, DIRECT # AOL video
+appnexus.com, 806, DIRECT # Appnexus video
+aolcloud.net, 4596, DIRECT # AOL video
+sonobi.com, 116da9d98c, DIRECT # Sonobi video
+indexexchange.com, 183921, DIRECT # Index video
+improvedigital.com, 1012, DIRECT # ImproveD video
+districtm.io, 100749, DIRECT #DM direct video
+appnexus.com, 1908, RESELLER #DM reseller video
+appnexus.com, 7944, RESELLER #DM reseller video
+conversantmedia.com, 41150, DIRECT # Conversant video
+sovrn.com, 237754, DIRECT, fafdf38b16bf6b2b # Sovrn video
+openx.com, 537144009, DIRECT, 6a698e2ec38604c6 #OpneX video
+rubiconproject.com, 13762, DIRECT, 0bfd66d529a55807 # Rubicon video
+rubiconproject.com, 19582, DIRECT, 0bfd66d529a55807 # Rubicon AU video
+rhythmone.com, 1155926068, DIRECT, a670c89d4a324e47 #Rone video
+rhythmone.com, 608304513, DIRECT, a670c89d4a324e47 #Rone video
+advertising.com, 2694, DIRECT #video
+adtech.com, 2694, DIRECT #video
+aolcloud.net, 2694, DIRECT #video
+freewheel.tv, 1953, DIRECT #video
+improvedigital.com, 1012, DIRECT #video
+lkqd.net, 304, DIRECT, 59c49fa9598a0117 #video
+lkqd.com, 304, RESELLER, 59c49fa9598a0117 #video
+spotx.tv, 141412, DIRECT, 7842df1d2fe2db34 #video
+tremorhub.com, hpwve, RESELLER, 1a4e959a1b50034a #video
+telaria.com, hpwve, RESELLER, 1a4e959a1b50034a #video
+tremorhub.com, zksge-09nus, RESELLER, 1a4e959a1b50034a #video AU
+tremorhub.com, zksge-kzhxp, RESELLER, 1a4e959a1b50034a #video AU
+telaria.com, zksge-09nus, RESELLER, 1a4e959a1b50034a #video AU
+telaria.com, zksge-kzhxp, RESELLER, 1a4e959a1b50034a #video AU
+spotxchange.com, 141412, DIRECT, 7842df1d2fe2db34 #video
+pubmatic.com, 156715, DIRECT, 5d62403b186f2ace #video
+freewheel.tv, 187721, DIRECT #video
+freewheel.tv, 211121, DIRECT #video
+freewheel.tv, 196129, DIRECT #video
+freewheel.tv, 228641, DIRECT #video
+freewheel.tv, 187865, DIRECT #video
+freewheel.tv, 211129, DIRECT #video
+freewheel.tv, 196145, DIRECT #video
+freewheel.tv, 228649, DIRECT #video
+teads.tv, 16676, DIRECT, 15a9c44f6d26cbe1 #video
+loopme.com, 10509, DIRECT, 6c8d5f95897a5a3b #LoopMe
+loopme.com, s-2411, RESELLER, 6c8d5f95897a5a3b #LoopMe
+loopme.com, 11002, RESELLER, 6c8d5f95897a5a3b #LoopMe
+loopme.com, 6576, RESELLER, 6c8d5f95897a5a3b #LoopMe
+loopme.com, 10925, RESELLER, 6c8d5f95897a5a3b #LoopMe
+loopme.com, 5679, RESELLER, 6c8d5f95897a5a3b #LoopMe
