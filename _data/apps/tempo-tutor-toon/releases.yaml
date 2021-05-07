@@ -1,0 +1,18 @@
+- version: 202105071
+  privacy-date: 2021-05-04
+  notes:
+    - Removed all advertising libraries and frameworks.
+    - Removed all analytics libraries and frameworks.
+
+- version: 201910091
+  privacy-date: 2019-10-05
+  notes:
+    - Changed Time and BPM selection to picker wheels.
+    - Added back buttons for user convenience.
+    - Ad locked features are unlocked longer after reward ads..
+    - Several minor bug fixes and improvements.
+    - Removed analytics for less concern about data sharing consent.
+
+- version: 201905111
+  notes:
+    - First release.
