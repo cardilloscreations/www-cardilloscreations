@@ -3,20 +3,21 @@
 
 <div class="accordions-wrap" initial-tab="0">
 
-{% for release in include.releases %}
-{% assign version = release.version %}
-{% assign privacy-date = release.privacy-date %}
+{%- for release in include.releases -%}
+{%- assign version = release.version -%}
+{%- assign privacy-date = release.privacy-date -%}
 
   <h5 class="tab">Version: {{ version }}</h5>
   <div class="pane" style="margin-left: 1.6em;">
-    <div class="text-monospace">{% if privacy-date %}<b>APP PRIVACY POLICY:</b>
-<a href="./privacy/privacy.{{ privacy-date | date: '%Y%m%d' }}.html">Privacy Policy ({{ privacy-date }})</a>
-{% endif %}
+    <div class="text-monospace">
+{%- if privacy-date -%}<b>APP PRIVACY POLICY:</b>
+- <a href="./privacy/privacy.{{ privacy-date | date: '%Y%m%d' }}.html">Privacy Policy ({{ privacy-date }})</a>
+{% endif -%}
 <b>APP RELEASE NOTES:</b> {% for note in release.notes %}
-- {{ note }} {% endfor %}
+- {{ note }} {% endfor -%}
     </div>
   </div>
 
-{% endfor %}
+{%- endfor -%}
 
 </div>
