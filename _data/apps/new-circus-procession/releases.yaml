@@ -1,6 +1,6 @@
-- version: 202105071
+- version: 202105091
   status: pending
-  privacy-date: 2021-05-04
+  privacy-date: 2021-05-09
   notes:
     - Removed all advertising libraries and frameworks.
     - Removed all analytics libraries and frameworks.
