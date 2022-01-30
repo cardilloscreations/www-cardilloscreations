@@ -292,3 +292,15 @@ blockquote {
     transform: translate3d(0, 0, 0);
   }
 }
+
+.bg-transparent-white {
+  background: transparentize($white, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.bg-transparent-black {
+  background: transparentize($black, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}

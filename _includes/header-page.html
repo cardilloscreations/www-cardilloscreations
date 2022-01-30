@@ -51,14 +51,9 @@
       <div class="heading-content text-center child-center-v">
 
         <!-- Heading Title -->
-        <div class="row heading-title">
+        <div class="row heading-title bg-transparent-black">
           <h2>
-            {% if page.tagline == null %}
-            {{ page.type }}
-            {% else %}
-            {{ page.tagline }}
-            {% endif %}
-
+            {{ page.tagline | default: page.type }}
           </h2>
           <hr class="small">
           <h1 class="thin">{{ page.title }}</h1>
