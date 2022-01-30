@@ -1,58 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-US" class="no-js">
-<!--
-	Copyright 2019 - Raymond Cardillo (dba Cardillo's Creations)
--->
+<!DOCTYPE html >
+<html lang="{{ site.lang }}">
 
-<head>
+  {% include head.html %}
 
-    <meta charset="UTF-8" />
-    <title>{{ page.title }} | Cardillo&#039;s Creations</title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <body>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-
-    {% include css.html %}
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2183513758991067" crossorigin="anonymous">
-    </script>
-</head>
-
-<body class="page page-template-default header-light footer-dark show-space-light">
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader"><span class="load-icon"></span></div>
 
     {% include header.html %}
 
-    <section id="inner-page-show-space">
-        <div id="page-header" class="container">
-            <h1 id="page-title">{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h3 id="page-subtitle">{{ page.subtitle }}</h3>
-            {% endif %}
-        </div>
-        <div id="show-space-shadow"></div>
-        <div id="pattern"></div>
-    </section><!-- #inner-page-show-space -->
-
-    <section id="body" class="full-width">
-        <div id="body-wrap" class="container">
-            <div id="body-content" class="clearfix">
-                <div id="main-content">
-                    {{ content }}
-
-                    <div class="clear"></div>
-                    <div class="space"></div>
-                </div><!-- #main-content -->
-            </div><!-- #body-content -->
-        </div><!-- #body-wrap -->
-    </section><!-- #body -->
+    {{ content }}
 
     {% include footer.html %}
 
-    {% include javascript.html %}
-    {% include google-analytics.html %}
+    {% include scripts.html %}
 
-</body>
+  </body>
 
 </html>

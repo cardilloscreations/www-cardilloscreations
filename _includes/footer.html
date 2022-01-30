@@ -1,11 +1,39 @@
-<footer>
-	<div id="footer-content" class="clearfix container">
-		<div id="footer-menu">
-			<ul id="menu-footer" class="menu">
-				<li id="menu-item-fterms" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-fterms"><a href="/legal/terms.html">Terms of Use</a></li>
-				<li id="menu-item-ftprivacy" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-fprivacy"><a href="/legal/privacy.html">Privacy Policy</a></li>
-			</ul>
-		</div>
-		<div id="copyright">&copy; Cardillo's Creations, LLC. All Rights Reserved.</div>
-	</div>
+<!-- Site Footer -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-md-push-3 footer-info text-center">
+
+        <div class="footer-logo">
+          <img src="{{ site.baseurl }}/images/logo-focus.svg" width="250px" alt="Cardillo's Creations Logo" />
+        </div>
+
+        <div class="footer-info-text">
+          <p>{{ site.footer-description }}</p>
+        </div>
+
+        <div class="social-icons">
+          <ul class="icons">
+            <li><a href="{{ site.youtube }}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="{{ site.facebook }}" target="_blank"><i class="fa-brands fa-facebook"></i></i></a></li>
+            <li><a href="{{ site.instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></i></a></li>
+            <li><a href="{{ site.tiktok }}" target="_blank"><i class="fa-brands fa-tiktok"></i></i></a></li>
+            <li><a href="{{ site.twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 col-md-push-2 footer-copyright">
+        <div class="footer-text text-center">
+          <p>Copyright &copy; {{ site.footer-copyright-year }} by {{ site.footer-copyright-text }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </footer>
+
+<!-- Go To Top Button -->
+<a href="#home" class="go-to-top-button"><i class="pe-7s-angle-up"></i></a>
