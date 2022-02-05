@@ -4,7 +4,7 @@
 #
 
 # Information for compile
-exclude: ["Gemfile", "README.md", "AUTHORING.md"]
+exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
 
 # Sass configuration
 sass:
