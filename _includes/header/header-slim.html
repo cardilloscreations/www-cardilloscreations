@@ -1,0 +1,37 @@
+<!-- Site Header -->
+<header class="site-header slim-header parallax" id="home" data-scrollax-parent="true">
+
+<!-- Parallax Header Image -->
+<div class="parallax-wrapper">
+  <div class="cover" data-scrollax="properties: { 'translateY': '48%' }">
+    <img src="{{ site.baseurl }}/images/header-image.jpg" alt="{{ site.header-title }}" />
+  </div>
+</div>
+
+<div class="container">
+
+  {% include header/nav-bar.html %}
+
+  <!-- Site Header Banner -->
+  <div class="row header-banner parent" data-scrollax="properties: { 'translateY': '48%', 'opacity': '1.4' }">
+
+    <div class="heading-content text-center child-center-v">
+
+      <!-- Heading Title -->
+      <div class="row heading-title">
+        <h1 class="thin">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class="thin">
+          <hr class="small">
+          {{ page.subtitle }}
+        </h2>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</header>

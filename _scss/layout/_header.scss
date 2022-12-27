@@ -29,6 +29,23 @@ header.site-header {
       height: calc(600px - 250px);
     }
   }
+  
+  // Slim Header
+  &.slim-header {
+    height: 300px;
+
+    .parallax-wrapper {
+      height: 300px;
+    }
+
+    .container {
+      height: 300px;
+    }
+
+    .header-banner {
+      height: calc(300px - 150px);
+    }
+  }
 
   // Parallax-wrapper
   .parallax-wrapper {
