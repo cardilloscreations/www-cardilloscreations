@@ -11,14 +11,16 @@
     </p>
     <br>
 
-    <div class="row row-cols-1 row-cols-md-2 row-gap-3">
+    <div class="row row-cols-1 row-cols-md-2 row-gap-3 portfolio-grid">
 
       {% for item in site.portfolio %}
 
       <div class="col col-gap-3">
         <div class="card text-bg-dark w-100" style="width: 18rem;">
-          <div class="card-header text-nowrap"><h4>{{ item.title }}</h4></div>        
-          <img class="card-img-top" src="{{ site.images_path }}/portfolio/{{ item.image }}" alt="Portfolio Item Image" />
+          <a href="{{ item.url }}" title="Link to {{ item.title | strip_html }}">
+            <div class="card-header text-nowrap"><h4>{{ item.title }}</h4></div>      
+            <img class="card-img-top" src="{{ site.images_path }}/portfolio/{{ item.image }}" alt="Portfolio Item Image" />
+          </a>
           <div class="card-footer">
             <ul class="nav nav-pills card-header-pills justify-content-center">
               <li class="nav-item mx-auto">
