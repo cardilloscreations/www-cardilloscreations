@@ -1,56 +1,57 @@
 /**
- *
  *  Footer Style
- *
- *  @package ohkimur_layout
- *
  **/
 
 footer.site-footer {
   position: relative;
-  color: $footer-color;
-  background-color: $footer-background-color;
+  color: $color-footer-primary;
   width: 100%;
+  margin-top: $section-top-space;
+  text-align: center;
+  content-visibility: auto;
+  contain-intrinsic-height: 222px;
 
-  // Footer Information
+  // Footer Information Section
   .footer-info {
-    padding: 80px 0;
-
-    .footer-logo {
-      position: relative;
-
-      img {
-        margin: 0 auto;
-      }
-    }
+    padding-bottom: 1.0em;
+    background-color: $color-footer-bg-lighter;
 
     .footer-info-text {
-      font-size: 1.275rem;
-      padding: 35px 0;
+      font-size: 1.25rem;
+      padding: 0.75em 0;
     }
 
     // Social Media Icons
     .social-icons {
-      a  {
-        color: $global-text;
+      a {
+        color: $color-footer-primary;
 
         &:hover,
         &:active {
-          color: $primary;
+          color: $color-footer-secondary;
         }
       }
     }
   }
 
-  // Footer Copyright
-  .footer-copyright {
+  // Footer Legal Section
+  .footer-legal {
     font-size: 1.0rem;
-    border-top: 1px solid $normal-gray;
-    padding: 30px 0;
+    padding: 1em 2em;
+    background-color: $color-footer-bg-darker;
 
     .footer-text {
-      width: 100%;
+      a {
+        color: $color-footer-primary;
+
+        &:hover,
+        &:active {
+          color: $color-footer-secondary;
+        }
+      }
+      p {
+        margin-bottom: 0.75em;
+      }
     }
   }
-
 }

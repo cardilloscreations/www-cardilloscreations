@@ -1,0 +1,49 @@
+/**
+ *  Color Skin
+ **/
+
+// Global Palette
+$color-white: #fff;
+$color-white-transparent: rgba($color-white, 0.75);
+$color-black: #000;
+$color-black-transparent: rgba($color-black, 0.75);
+$color-light-blue: #f4f8f9;
+
+// Gray Palette
+$color-gray-1: #e8e8e8;
+$color-gray-2: #c8c8c8;
+$color-gray-3: #a8a8a8;
+$color-gray-4: #888888;
+$color-gray-5: #686868;
+$color-gray-6: #484848;
+$color-gray-7: #282828;
+
+// Light Color Scheme Areas
+$color-light-bg: $color-white;
+$color-light-primary: $color-gray-6;
+$color-light-secondary: $color-gray-5;
+$color-light-link: #6262d9;
+
+// Dark Color Scheme Areas
+$color-dark-bg: #222222;
+$color-dark-primary: #BBBBBB;
+$color-dark-secondary: #E0E0E0;
+
+// Sections Colors
+$color-section-bg: $color-white;
+$color-section-focus: $color-light-blue;
+
+// Navbar Colors
+$color-navbar-bg: #222222;
+$color-navbar-text-active: $color-white;
+$color-navbar-text: darken($color-navbar-text-active, 30%);
+
+// Sidebar Colors [Widgets]
+$color-sidebar-title: $color-light-secondary;
+$color-sidebar-header: $color-light-blue;
+
+// Footer Colors
+$color-footer-bg-darker: $color-dark-bg;
+$color-footer-bg-lighter: lighten($color-dark-bg, 4%);
+$color-footer-primary: $color-dark-primary;
+$color-footer-secondary: $color-dark-secondary;

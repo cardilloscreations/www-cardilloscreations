@@ -1,30 +1,105 @@
-<!-- Site Head -->
 <head>
-  <meta charset="utf-8" />
-  <title>{{ page.title | strip_html }}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  {%- capture abs_page_url %}{{ site.url }}/{{ site.baseurl }}/{{ page.url }}{% endcapture -%}
+  {%- capture page_title -%}
+  {%- if page.title -%}
+  {{ page.title | strip_html }} - {{ site.title }}
+  {%- else -%}
+  {{ site.title }}
+  {%- endif -%}
+  {%- endcapture -%}
+  {%- capture page_description -%}
+  {%- if page.description -%}
+  {{ page.description | strip }}
+  {%- else -%}
+  {{ site.description | strip }}
+  {%- endif -%}
+  {%- endcapture -%}
 
-  <!-- Importing Styles -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
-  <!-- various forms of favicons !-->
-  <!-- see: https://realfavicongenerator.net/ !-->
-  <link rel="icon" sizes="any" type="image/svg+xml" href="/images/favicon/favicon.svg?v=20220130">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=20220130">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=20220130">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=20220130">
-  <link rel="manifest" href="/images/favicon/site.webmanifest?v=20220130">
-  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=20220130" color="#5bbad5">
-  <link rel="shortcut icon" href="/images/favicon/favicon.ico?v=20220130">
+  {%- comment %} Preload any layout specific lines {% endcomment -%}
+  {{ include.preloadLines }}
+
+  {%- comment %} Preload any page specific items {% endcomment -%}
+  {%- for preloadItem in page.preloadItems -%}
+  <link rel="preload" href="{{ site.baseurl }}/{{ preloadItem.href }}" {{ preloadItem.params }}>
+  {%- endfor -%}  
+
+  {%- comment %} Warm up references with Pre-Connect {% endcomment -%}
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  {%- comment %} Preload the stylesheets to maybe get a minor jumpstart {% endcomment -%}
+  <link rel="preload" href="{{ site.baseurl }}/{{ site.css_path }}/style.css" type="text/css" as="style">
+
+  {%- comment %} Load the stylesheets {% endcomment -%}
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/{{ site.css_path }}/style.css">
+
+  {%- comment %} General Page Metadata {% endcomment -%}
+  <title>{{ page_title }}</title>
+  <meta name="title" content="{{ page_title }}">
+  <meta name="description" content="{{ page_description }}">
+  {%- if page.image -%}
+  <link rel="image_src" href="{{ page.image }}">
+  {%- endif -%}
+
+  {%- comment %} Canoncial URL needed for crawlers (e.g., "/" vs "index.html") {% endcomment -%}
+  <link rel="canonical" href="{{ abs_page_url }}">
+
+  {%- comment %} Geo Location Meta {% endcomment -%}
+  <meta name="DC.title" content="{{ page_title }}">
+  <meta name="geo.region" content="US-FL">
+  <meta name="geo.placename" content="Orlando">
+  <meta name="geo.position" content="28.424796790660206;-81.31030073133005">
+  <meta name="ICBM" content="28.424796790660206, -81.31030073133005">
+  <meta name="city" content="Orlando">
+  <meta name="state" content="Florida">
+  <meta name="zipcode" content="32827">
+
+  {%- comment %} Open Graph Metadata {% endcomment -%}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ site.lang | replace: " -", "_" }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ abs_page_url }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:updated_time" content="{{ site.time }}">
+  {%- if page_description -%}
+  <meta property="og:description" content="{{ page_description | truncatewords:200 }}">
+  {%- endif -%}
+  {%- if page.image -%}
+  <meta property="og:image" content="{{ page.image }}?{{ site.time | date: '%s' }}">
+  {%- else -%}
+  <meta property="og:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.image }} -%}?{{ site.time | date: '%s' }}">
+  {%- endif -%}
+  {%- if page.youtubeid -%}
+  <meta property="og:video" content="https://youtu.be/{{ page.youtubeid }}">
+  {%- endif -%}
+
+  {%- comment %} Twitter Metadata {% endcomment -%}
+  <meta name="twitter:site" content="{{ site.twitter | split: '/' | last }}">
+  <meta name="twitter:url" content="{{ abs_page_url }}">
+  <meta name="twitter:title" content="{{ page_title }}">
+  {%- if page_description -%}
+  <meta name="twitter:description" content="{{ page_description | truncatewords:200 }}">
+  {%- endif -%}
+  {%- if page.image -%}
+  <meta name="twitter:image" content="{{ page.image }}?{{ site.time | date: '%s' }}">
+  {%- else -%}
+  <meta property="twitter:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.image }} -%}?{{ site.time | date: '%s' }}">
+  {%- endif -%}
+
+  {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
+  <link rel="icon" sizes="any" type="image/svg+xml" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/{{ site.images_path }}/favicon/apple-touch-icon.png?v=2023.07.29.21">
+  <link rel="icon" type="image/png" sizes="32x32" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon-32x32.png?v=2023.07.29.21">
+  <link rel="icon" type="image/png" sizes="16x16" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon-16x16.png?v=2023.07.29.21">
+  <link rel="manifest" fetchpriority="low" href="/{{ site.images_path }}/favicon/site.webmanifest?v=2023.07.29.21">
+  <link rel="mask-icon" href="/{{ site.images_path }}/favicon/safari-pinned-tab.svg?v=2023.07.29.21" color="#5bbad5">
+  <link rel="shortcut icon" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon.ico?v=2023.07.29.21">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png?v=20220130">
-  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=20220130">
+  <meta name="msapplication-config" content="/{{ site.images_path }}/favicon/browserconfig.xml?v=2023.07.29.21">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Font Awesome Kit Reference -->
-  <script src="https://kit.fontawesome.com/b37559d3ba.js" crossorigin="anonymous"></script>
-
-  {% include google-analytics.html %}
 </head>

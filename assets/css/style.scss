@@ -1,0 +1,27 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// NOTE: We download the Bootstrap package, import all, then purge unused.
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Base
+@import "base/_config",
+        "base/_keyframes",
+        "base/_color-skin";
+
+// Components
+@import "components/_navbar",
+        "components/_social-icons";
+
+// Layout
+@import "layout/_global",
+        "layout/_header",
+        "layout/_sections",
+        "layout/_sidebar",
+        "layout/_portfolio",
+        "layout/_footer";
+
+// Pages
+@import "pages/_related";

@@ -1,12 +1,15 @@
 /**
- *
- *  Sidebar Aside Style
- *
- *  @package ohkimur_layout
- *
+ *  Sidebar Style
  **/
 
 aside.site-sidebar {
+
+  margin: 0;
+  padding: 0;
+
+  ul {
+    list-style: none;
+  }
 
   // Widget
   .widget {
@@ -15,9 +18,9 @@ aside.site-sidebar {
     // Widget Header
     header.widget-header {
       padding: 24px 30px;
-      color: $sidebar-title;
+      color: $color-sidebar-title;
       margin-bottom: 30px;
-      background-color: $sidebar-header;
+      background-color: $color-sidebar-header;
 
       h4.widget-title {
         font-size: 1.25rem;
@@ -27,85 +30,39 @@ aside.site-sidebar {
 
   }
 
-  // About Widget
-  .about-widget {
-
-    .widget-content {
-
-      .social-icons {
-        margin-top: 10px;
-
-        .icons {
-          a {
-            .fi {
-              display: inline-block;
-              font-size: 1.48rem;
-              margin-bottom: 10px;
-            }
-          }
-        }
-      }
-
-      .info {
-        display: block;
-        position: relative;
-        clear: both;
-
-        .author-name {
-          font-size: 1.25rem;
-          color: $sidebar-title;
-          text-transform: uppercase;
-          margin-bottom: 6px;
-        }
-
-        .author-info {
-          color: $simple-gray;
-        }
-
-        hr.medium {
-          float: left;
-          margin-top: 20px;
-          margin-bottom: 20px;
-        }
-
-      }
-
-      .author-text {
-        font-size: 0.8rem;
-      }
-
-    }
-
-  }
-
   // Categories Widget
   .categories-widget {
     .widget-content {
 
       ul.categories-box {
-        li {
+        margin: 0;
+        padding: 0;
+
+        li {          
           a {
             display: block;
             padding: 20px 30px;
-            color: $global-text;
-            border-bottom: 1px solid $sidebar-header;
+            border-bottom: 1px solid $color-sidebar-header;
 
             .cat-count {
               float: right;
               margin-top: -3px;
               padding: 5px 6px;
               border-radius: 3px;
-              background: $sidebar-header;
+              background: $color-sidebar-header;
               font-size: 0.6875rem;
               transition: color, background $transition-links $transition-links-type;
             }
 
+            color: $color-gray-5;
+
             &:hover {
-              color: $primary;
+              color: $color-light-link;
 
               .cat-count {
-                color: $white;
-                background: $primary;
+                color: $color-white;
+                background: $color-light-link;
+                font-weight: bold;
               }
             }
 
@@ -119,41 +76,35 @@ aside.site-sidebar {
 
         }
       }
-
     }
   }
 
-  // Tags Cloud
-  .tags-cloud-widget {
+  // Tags Widget
+  .tags-widget {
     .widget-content {
 
-    // Silence is Golden
+      ul.tag-box {
+        margin: 0;
+        padding: 0;
 
-    }
-  }
+        li {
+          float: left;
+          margin: 0 10px 10px 0;
 
-  // Newsletter Widget
-  .newsletter-widget {
-    .widget-content {
+          a {
+            display: block;
+            padding: 8px 12px;
+            color: $color-gray-4;
+            border: 1px solid $color-gray-3;
 
-      form.newsletter-email-signup {
-        .field-group {
-          margin-bottom: 20px;
-
-          input {
-            border-width: 2px;
-            padding: 20px;
+            &:hover {
+              color: $color-white;
+              border-color: $color-light-primary;
+              background: $color-light-primary;
+            }
           }
         }
 
-        .button-subscribe {
-          padding: 20px;
-          text-transform: uppercase;
-        }
-
-        p {
-          margin-top: 10px;
-        }
       }
 
     }

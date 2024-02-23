@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{%- capture preloadLines -%}
+<link rel="preload" media="(orientation:portrait) and (max-width: 767.98px)" href="{% link {{ site.images_path }}/header-image.port.sm.webp %}" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" media="(orientation:portrait) and (min-width: 768px)" href="{% link {{ site.images_path }}/header-image.port.md.webp %}" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" media="(orientation:landscape)" href="{% link {{ site.images_path }}/header-image.land.webp %}" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="{% link {{ site.images_path }}/icons/down-arrow.svg %}" as="image" type="image/svg+xml" fetchpriority="high">
+{%- endcapture -%}
+{%- include head.html preloadLines=preloadLines -%}
+
+<body>
+
+  {%- include header/nav-bar.html -%}
+
+  <div tabindex="0" data-bs-spy="scroll" data-bs-target="#site-navbar" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -30%">
+
+    {%- include header/header-hero.html -%}
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+    {%- include footer.html -%}
+
+  </div>
+
+  {%- include scripts/ext-scripts.html -%}
+
+</body>
+
+</html>

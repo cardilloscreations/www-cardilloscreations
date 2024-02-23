@@ -1,57 +1,57 @@
 /**
- *
- *  Sections Style
- *
- *  @package ohkimur_layout
- *
+ *  General Sections Style
  **/
 
+// Default site section styling
 section.site-section {
-  padding: 100px 0;
-  background: $section-bg;
-  // z-index: 1;
+  padding: $section-top-space $section-side-space 0;
+  background: $color-section-bg;
+  content-visibility: auto;
+
+  // Scroll margin when smaller than mobile break
+  @media (max-width: $mobile-break) {
+    scroll-margin-top: $navbar-offset-mobile;
+  }
+
+  // Scroll margin when larger than mobile break
+  @media (min-width: $mobile-break) {
+    scroll-margin-top: $navbar-offset-full;
+  }
 
   // Section Header
   header.section-header {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
 
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: bold;
-      text-transform: uppercase;
-      color: $secondary;
-    }
+    border-bottom: 1px solid $color-light-secondary;
+    margin: 0 1em 2em 1em;
+
+    font-weight: bold;
+    color: $color-light-primary;
 
     hr.normal {
-      margin: 40px auto;
+      margin: 1.55em auto;
+    }
+  }
+
+  .section-content {
+    .lead {
+      font-size: 1.25em;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    blockquote {
+      font-size: 1.15em;
+      text-align: center;
+      text-align-last: center;
     }
   }
 
   // Section Focus
   &.section-focus {
-    background-color: $section-focus;
-
-    &.next-section-indicator:after {
-      border-top-color: $section-focus;
-    }
+    background-color: $color-section-focus;
   }
 
-  // Next Section Indicator
-  &.next-section-indicator {
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      bottom: -30px;
-      left: 50%;
-      z-index: 3;
-      transform: translate(-50%);
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
-
-      border-top: 30px solid $background-color;
-    }
-
-  }
 }

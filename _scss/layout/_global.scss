@@ -1,96 +1,19 @@
 /**
- *
  *  Global Style
- *
- *  @package ohkimur_layout
- *
  **/
 
 body {
+  color: $color-light-primary;
+  background-color: $color-light-bg;
 
   // Typography
   font: {
-    family: $font-family, Arial, sans-serif;
-    size: $global-font-size;
+    family: Verdana, Arial, sans-serif;
     weight: normal;
   }
-
-  color: $global-text;
-
-  // Background
-  background-color: $background-color;
-
-  // Overflow No Scroll
-  .site-header .container {
-    &:before {
-      content: '';
-      display: block;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      background-color: transparent;
-      transition: background-color $transition-links $transition-links-type;
-      z-index: 99;
-    }
-  }
-
-  // No Scroll - Lock body scrolling.
-  &.no-scroll {
-    height: 100vh;
-    overflow-y: hidden;
-
-    .site-header .container {
-      &:before {
-        width: auto;
-        height: auto;
-        background-color: $black-transparent;
-      }
-    }
-
-  }
-
-}
-
-// Text Format
-strong, b {
-  font-weight: bold;
-}
-
-em, i {
-  font-style: italic;
-}
-
-.thin {
-  font-weight: lighter;
-}
-
-// Heading
-h1 {
-  font-size: 3.75rem;
-}
-
-h2 {
-  font-size: 2.1875rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1.15rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.85rem;
+  //letter-spacing: 1px;
+  word-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Paragraphs
@@ -105,26 +28,25 @@ p {
 
 // Horizontal Lines
 hr {
-  clear :both;
+  clear: both;
   border: none;
   width: 100%;
-  height: 1px;
-  background-color: $simple-gray;
+  height: 2px;
+  background-color: $color-light-secondary;
 
   &.separator {
     width: 60%;
   }
 
   &.small {
-    width: 40px;
-    height: 2px;
-    background-color: $primary;
+    width: 3em;
+    margin: 1.5em auto;
+    background-color: $color-light-primary;
   }
 
   &.medium {
     width: 70px;
-    height: 1px;
-    background-color: $primary;
+    background-color: $color-light-primary;
   }
 
   &.normal {
@@ -132,7 +54,7 @@ hr {
     border: none;
     width: 100px;
     height: 4px;
-    background-color: $secondary;
+    background-color: $color-light-secondary;
 
     &:after {
       display: block;
@@ -140,7 +62,7 @@ hr {
       content: "";
       width: 50%;
       height: 4px;
-      background: $primary;
+      background: $color-light-primary;
       top: 0;
       right: 0;
     }
@@ -150,157 +72,50 @@ hr {
 
 // Links
 a {
-  color: $primary;
+  color: $color-light-link;
   text-decoration: none;
   transition: all $transition-links $transition-links-type;
 
   &:hover,
   &:active {
-    color: lighten($primary, 20%);
-  }
-}
-
-// Images
-img {
-  display: block;
-  position: relative;
-  max-width: 100%;
-  height: auto !important;
-}
-
-// Quotes
-blockquote {
-  display: block;
-  position: relative;
-  width: auto;
-  float: left;
-  font-size: 1.95em;
-  font-weight: lighter;
-  line-height: 1.35;
-  padding: 0 10%;
-  margin: 1.2em auto 1em auto;
-  z-index: 1;
-
-  small {
-    display: block;
-    font-size: 1.6rem;
-    font-style: italic;
-    margin-top: 3%;
-    float: right;
-  }
-
-  &:before {
-    content: '\0022';
-    position: absolute;
-    font-size: 7em;
-    font-weight: 900;
-    opacity: 0.1;
-    top: -6rem;
-    left: 5%;
-    z-index: -1;
-  }
-
-  @media (max-width: 450px) {
-    font-size: 1.75em;
-
-    small {
-      font-size: 1.2rem;
-    }
-
-    &:before {
-      top: -3rem;
-      left: 3%;
-    }
-  }
-}
-
-// Page Loader
-.page-loader {
-	display: block;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-  right: 0;
-  bottom: 0;
-	left: 0;
-	opacity: 1;
-  background: $light-blue;
-	transition: all 0.7s $transition-links-type;
-  z-index: 99999999999;
-
-  // Load Icon
-	.load-icon {
-		display: block;
-    position: relative;
-		width: 70px;
-		height: 70px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-		&:before, &:after {
-			content: '';
-			display: block;
-			position: absolute;
-			background: rgba($primary, 0.2);
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
-
-		&:before { animation: sera-loader-in .85s linear 0s alternate infinite; }
-		&:after { animation: sera-loader-out .85s linear 0s alternate infinite; }
-	}
-
-  // After Complete Loading Destroy
-	&.load-complete {
-		height: 0;
-		opacity: 0;
-	}
-}
-
-// Go to top
-.go-to-top-button {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border: 1px solid $primary;
-  background: rgba($light-blue, 0.2);
-  transform: translate3d(0, calc(130% + 50px), 0);
-  transition: all $transition-links $transition-links-type;
-  z-index: 9999;
-
-  // Arrow Icon
-  i {
-    font-size: 3.2rem;
-  }
-
-  &:hover {
-    color: $white;
-    background: $primary;
-  }
-
-  // Active Destroy
-  &.active {
-    transform: translate3d(0, 0, 0);
+    color: darken($color-light-link, 10%);
+    font-weight: 500;
   }
 }
 
 .bg-transparent-white {
-  background: transparentize($white, 0.5);
+  background: transparentize($color-white, 0.5);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
 
 .bg-transparent-black {
-  background: transparentize($black, 0.5);
+  background: transparentize($color-black, 0.6);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+}
+
+// Images
+img {
+  position: relative;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Preformatted Monospaced
+p.premono {
+  font-family: monospace;
+  white-space: pre-wrap;       // css-3 
+  white-space: -moz-pre-wrap;  // Mozilla, since 1999
+  white-space: -pre-wrap;      // Opera 4-6
+  white-space: -o-pre-wrap;    // Opera 7
+  word-wrap: break-word;       // Internet Explorer 5.5+
+  &:first-line {
+    line-height: 0px;
+  }
 }

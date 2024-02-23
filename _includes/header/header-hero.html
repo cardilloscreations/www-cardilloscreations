@@ -1,0 +1,26 @@
+<header class="site-header hero-header">
+
+  {%- comment %} Site Header Banner {% endcomment -%}
+  <div class="header-banner">
+
+    {% include header/hero-image.html %}
+
+    <div class="heading-content text-center bg-transparent-black rounded-3">
+      <div class="heading-title">
+        <div class="heading-tagline">
+          <p class="h4">{{ site.header-tagline }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- comment %} Arrow Down {% endcomment -%}
+  <div class="arrow-down-section">
+    <div class="wrapper-arrow child-center">
+      <a href="#about" aria-label="Skip header and go to next section" class="arrow-down">
+        <img src="{% link {{ site.images_path }}/icons/down-arrow.svg %}" alt="Next Section" height="100" width="100" fetchpriority="high">
+      </a>
+    </div>
+  </div>
+
+</header>

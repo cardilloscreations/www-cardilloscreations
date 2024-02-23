@@ -1,0 +1,33 @@
+/**
+ *  Navbar Style
+ **/
+
+nav.navbar {
+    background-color: $color-navbar-bg;
+
+    .navbar-brand {
+        width: auto;
+        max-width: 65%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .navbar-nav li a {
+        color: $color-navbar-text !important;
+        &.active,
+        &:active {
+            color: $color-navbar-text-active !important;
+        }
+    }
+
+    .dropdown-item {
+        &.active,
+        &:active {
+            color: $color-white;
+            background-color: transparentize($color: $color-white, $amount: 0.80);
+        }
+    }
+}

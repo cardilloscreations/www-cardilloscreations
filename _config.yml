@@ -1,10 +1,29 @@
 #
-# Sera - OnePage Jekyll Theme
 # Configuration File
 #
 
+# Enable additional diagnostics
+verbose: true
+profile: true
+
 # Information for compile
-exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
+exclude:
+  - "CNAME"
+  - "LICENSE"
+  - "README.md"
+  - "DEVELOPMENT.md"
+  - "ATTRIBUTIONS.md"
+  - "_posts/README.md"
+  - "*.js"
+  - "*.json"
+  - "assets/images/favicon/*.webmanifest"
+  - "assets/images/favicon/*.md"
+  - "assets/images/favicon/*.html"
+  - "assets/images/favicon/*.xml"
+
+# Plugins
+plugins:
+  - jekyll-sitemap
 
 # Sass configuration
 sass:
@@ -16,119 +35,122 @@ baseurl: ""
 # the base hostname & protocol for your site
 url: "https://cardilloscreations.com"
 
-####################################
-######   Optional Features    ######
-####################################
-smooth-scroll: false
+assets_path:  assets
+css_path:     assets/css
+images_path:  assets/images
 
-####################################
-###########   Plugins    ###########
-####################################
-plugins:
-  - jekyll-archives
+##
+## HEADER INFORMATION
+##
 
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: "archive"
-  permalinks:
-    category: "/category/:name/"
-    tag: "/tag/:name/"
-
-#######################################################
-#######################################################
-###############   HEADER INFORMATION   ###############
-#######################################################
-#######################################################
-
-# This is your site title
+# This is the site title
 title: Cardillo's Creations
+# This is the site description - must be between 25 and 160 characters for Bing SEO
+description: >
+  Cardillo's Creations is a woman owned small business that pursues
+  online business opportunities and shares information on their podcast.
+
 # Website language
 lang: en-US
 # Header Title
 header-title: Cardillo's Creations
 # Header Tagline
-header-tagline: Ray Cardillo's Creative Pursuits
+header-tagline: Lisa & Ray Cardillo's Creative Pursuits
 
-#
-# This is your email adress, contact from send here all emails from contact section
-# IMPORTANT: you can modify contact form from this static template, but now works contact form works with a free external server
-# To configure this contact form, first please send a fictive email afeter you enter below your email and verify that :)
-#
+# The general contact default email address
 email: hello@cardilloscreations.com
 
-####################################
-######  Global Social Links   ######
-####################################
-youtube: "https://www.youtube.com/channel/UC0HU7g_ZH-sXbmjlW4nXgQg"
+##
+## Global Social Links
+##
+youtube: "https://www.youtube.com/@CardillosCreations"
 facebook: "https://www.facebook.com/CardillosCreations/"
 instagram: "https://www.instagram.com/cardilloscreations/"
 twitter: "https://twitter.com/CardilloCreates"
 tiktok: "https://www.tiktok.com/@cardilloscreations"
 
-#########################
-######   Widgets   ######
-#########################
+##
+## Global Images
+##
+image: default.webp
+link-icon: icons/facebook.svg
+facebook-icon: icons/facebook.svg
+instagram-icon: icons/instagram.svg
+twitterx-icon: icons/twitterx.svg
+tiktok-icon: icons/tiktok.svg
+youtube-icon: icons/youtube.svg
+linkedin-icon: icons/linkedin.svg
+email-icon: icons/email.svg
+pinterest-icon: icons/pinterest.svg
+shop-icon: icons/shop.svg
+amazon-icon: icons/amazon.svg
+acast-icon: icons/acast.svg
+spotify-icon: icons/spotify.svg
+applepodcasts-icon: icons/applepodcasts.svg
 
-#####################################
-#############   About   #############
-#####################################
-about-title: About Us
-about-description-short: Cardillo's Creations is owned by Ray Cardillo.
-about-description-long: >
-  This was once <a title="Cardillo's Creations Archived Website" alt="Cardillo's Creations Archived Website" href="https://web.archive.org/web/20220129181020/https://cardilloscreations.com/">my mobile app website</a>
-  but I have removed my mobile applications from the app stores so I can focus
-  on other creative pursuits.
-  See my brand portfolio below to learn more.
-
-#####################################
-############  Portfolio  ############
-#####################################
-portfolio-title: Portfolio
-portfolio-description: I am now focusing mainly on content creation and artistic interests.
-
-#
-# Portfolio Grid
-#
-portfolio-categories:
-  [YouTube, Artistic]
+##
+## Portfolio Grid
+##
 portfolio:
   # Portfolio Item
-  - title: L<span class="thin">ong</span> T<span class="thin">ooth</span> G<span class="thin">amer</span>
-    categories: [YouTube]
-    image: long-tooth-gamer-portfolio-image.jpg
+  - title: <b>T</b>his <b>M</b>idlife <b>H</b>ustle
+    image: this-midlife-hustle.webp
+    url: "https://thismidlifehustle.com"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@ThisMidlifeHustle"
+
+  # Portfolio Item
+  - title: <b>B</b>inaural <b>B</b>eat </b>B</b>ank
+    image: binaural-beat-bank.webp
+    url: "https://binauralbeatbank.com"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@BinauralBeatBank"
+
+  # Portfolio Item
+  - title: <b>S</b>itcom <b>S</b>leepers
+    image: sitcom-sleepers.webp
+    url: "https://sitcomsleepers.com"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@SitcomSleepers"
+
+  # Portfolio Item
+  - title: <b>L</b>ong <b>T</b>ooth <b>G</b>amer
+    image: long-tooth-gamer.webp
     url: "https://longtoothgamer.com"
-    ext-icon: "fa-brands fa-youtube"
-    ext-url: "https://www.youtube.com/channel/UC8nJI40ZJ2C682oAsB16gCA"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@LongToothGamer"
 
   # Portfolio Item
-  - title: L<span class="thin">isa</span> L<span class="thin">affs</span>
-    categories: [YouTube]
-    image: lisa-laffs-portfolio-image.jpg
+  - title: <b>L</b>isa <b>L</b>affs
+    image: lisa-laffs.webp
     url: "https://lisalaffs.com"
-    ext-icon: "fa-brands fa-youtube"
-    ext-url: "https://www.youtube.com/channel/UCOGZnusrYFnZ_L4QyHx0p-Q"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@LisaLaffsLOL"
 
   # Portfolio Item
-  - title: C<span class="thin">ardillo's</span> A<span class="thin">rt</span>
-    categories: [Artistic]
-    image: cardillos-art-portfolio-image.jpg
+  - title: <b>C</b>ardillo's <b>A</b>rt
+    image: cardillos-art.webp
     url: "https://cardillos.art"
-    ext-icon: "fa-brands fa-youtube"
-    ext-url: "https://www.youtube.com/channel/UCt8wFoYrllXNbRUNZHflX_Q"
+    ext-name: "YouTube"
+    ext-icon: "youtube.svg"
+    ext-url: "https://www.youtube.com/@Cardillos-Art"
 
   # Portfolio Item
-  - title: M<span class="thin">r</span> M<span class="thin">ighty's</span> F<span class="thin">ine</span> D<span class="thin">esigns</span>
-    categories: [Artistic]
-    image: mmfd-portfolio-image.jpg
+  - title: <b>M</b>r <b>M</b>ighty's <b>F</b>ine <b>D</b>esigns
+    image: mmfd.webp
     url: "https://mrmightysfinedesigns.com"
-    ext-icon: "fa-solid fa-cart-shopping"
+    ext-name: "Etsy"
+    ext-icon: "shopping.svg"
     ext-url: "https://www.etsy.com/shop/MrMightysFineDesigns"
 
-#####################################
-#############   Footer   ############
-#####################################
-footer-description: Find Cardillo's Creations on all of your favorite sites.
+##
+## Footer
+##
+footer-description: Find us on social media.
 footer-copyright-text: Cardillo's Creations, LLC
 footer-copyright-year: 2021

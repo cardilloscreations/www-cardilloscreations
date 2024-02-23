@@ -1,37 +1,19 @@
-<!-- Site Header -->
-<header class="site-header slim-header parallax" id="home" data-scrollax-parent="true">
+<header class="site-header slim-header">
 
-<!-- Parallax Header Image -->
-<div class="parallax-wrapper">
-  <div class="cover" data-scrollax="properties: { 'translateY': '48%' }">
-    <img src="{{ site.baseurl }}/images/header-image.jpg" alt="{{ site.header-title }}" />
-  </div>
-</div>
+  {%- comment %} Site Header Banner {% endcomment -%}
+  <div class="header-banner">
 
-<div class="container">
+    <img src="{% link {{ site.images_path }}/header-image.slim.webp %}" alt="{{ site.header-title }}" fetchpriority="high">
 
-  {% include header/nav-bar.html %}
+    <div class="heading-content text-center position-absolute top-50 start-50 translate-middle">
 
-  <!-- Site Header Banner -->
-  <div class="row header-banner parent" data-scrollax="properties: { 'translateY': '48%', 'opacity': '1.4' }">
-
-    <div class="heading-content text-center child-center-v">
-
-      <!-- Heading Title -->
+      {%- comment %} Heading Title {% endcomment -%}
       <div class="row heading-title">
-        <h1 class="thin">{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <h2 class="thin">
-          <hr class="small">
-          {{ page.subtitle }}
-        </h2>
-        {% endif %}
+        <h1 class="thin">{% if page.type %}<strong>{{page.type}}: </strong>{% endif %}{{ page.title }}</h1>
       </div>
 
     </div>
 
   </div>
-
-</div>
 
 </header>

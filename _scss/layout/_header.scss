@@ -1,231 +1,123 @@
 /**
- *
  *  Header Style
- *
- *  @package ohkimur_layout
- *
  **/
-
+ 
 header.site-header {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  max-height: 1080px;
+  width: 100vw;
   z-index: 1;
 
-  // Blog Header
-  &.blog-header {
-    height: 600px;
-
-    .parallax-wrapper {
-      height: 600px;
-    }
-
-    .container {
-      height: 600px;
-    }
-
-    .header-banner {
-      height: calc(600px - 250px);
-    }
-  }
-  
-  // Slim Header
-  &.slim-header {
-    height: 300px;
-
-    .parallax-wrapper {
-      height: 300px;
-    }
-
-    .container {
-      height: 300px;
-    }
-
-    .header-banner {
-      height: calc(300px - 150px);
-    }
-  }
-
-  // Parallax-wrapper
-  .parallax-wrapper {
-    overflow: hidden;
+  .header-banner {
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    max-height: 1080px;
     top: 0;
-    left: 0;
-  }
-
-  .container {
-    position: relative;
-    height: 100vh;
-    max-height: 1080px;
-  }
-
-  // Site Navigation Bar
-  .site-navigation-bar {
-    position: relative;
-    height: 100px;
-    min-height: 100px;
     z-index: 2;
+    color: $color-white;
 
-    // Logo
-    .logo {
-      img {
-        display: block;
-        float: left;
+    .heading-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      text-transform: uppercase;
+      text-align: center;
+      transform: translate(-50%, calc(-50% - #{$heading-content-offset}));
+
+      .heading-title {
+        text-shadow: 3px 3px 8px #000000;
+
+        hr.small {
+          margin: 1.0em auto;
+          opacity: 0.75;
+          background-color: $color-white;
+        }
+      }
+
+      .heading-buttons {
+        margin-top: 2em;
+
+        button {
+          padding-left: 1.5em;
+          padding-right: 1.5em;
+        }
       }
     }
 
-    // Navigation Bar
-    .navigation-bar {
+    img {
+      width: 100vw;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+    }
+  }
 
-      nav.nav-menu {
-        position: relative;
-        display: block;
-        float: right;
+  &.hero-header {
+    @include hero-height();
 
-        ul {
-          li {
-            float: left;
-            margin-right: 30px;
+    .header-banner .heading-content {
+      padding: 3em;
+      max-width: 48em;
+    }
 
-            &:last-child {
-              margin-right: 0;
-            }
+    picture {      
+      @include hero-height();
 
-            &.current-menu-item {
-              a {
-                color: $primary;
-                position: relative;
+      img {
+        @include hero-height();
+      }  
+    }
+  }
 
-                &:before {
-                  content: '';
-                  display: block;
-                  position: absolute;
-                  width: 50%;
-                  height: 1px;
-                  left: 50%;
-                  bottom: -10px;
-                  transform: translateX(-50%);
-                  background-color: $primary;
-                }
-              }
-            }
+  &.slim-header {
+    object-fit: cover;
+    object-position: center top;
+    padding-bottom: 1em;
 
-            a {
-              display: block;
-              color: $white;
-              padding: 10px 0;
+    img {
+      height: 8em;
+    }
 
-              &:hover,
-              &:active {
-                color: $primary;
-              }
+    .header-banner {
+      position: relative;
+    }
 
-            }
+    .heading-content {
+      padding: 0;
+      margin-top: 0.25em;
+
+      .heading-title {
+        h1 {
+          font-size: 1.9em;
+
+          @media (max-width: $mobile-break-xs) {
+            font-size: 1.1em;
+          }
+
+          @media (max-width: $mobile-break) {
+            font-size: 1.4em;
           }
         }
 
-      }
-    }
-
-  }
-
-  // Site Header Banner
-  .header-banner {
-    height: calc(100vh - 250px);
-    max-height: calc(1080px - 250px);
-    z-index: 2;
-    color: $white;
-
-    .heading-content {
-      width: 100%;
-      text-transform: uppercase;
-
-      .heading-title {
-        padding-top: 0.6em;
-        padding-bottom: 0.6em;
-
         hr.small {
-          margin-top: 40px;
-          margin-bottom: 40px;
-        }
-      }
-
-      .buttons-header {
-        margin-top: 40px;
-
-        .button-cta {
-          width: 100%;
+          margin: 0.2em auto 0.7em;
         }
       }
     }
+
   }
 
-  // Arrow Down Section
   .arrow-down-section {
     position: absolute;
+    text-align: center;
     width: 100%;
-    height: 150px;
-    bottom: 0;
+    height: $arrow-down-height;
+    bottom: 10rem;
     z-index: 3;
+    opacity: 0.60;
 
-    .arrow-down {
-      display: block;
-      position: relative;
-      font-size: 4rem;
-      line-height: 4rem;
-      color: $white;
-      width: 64px;
-      height: 64px;
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transform: rotate(45deg);
-      }
-
-      // Stroke
-      &:before {
-        border: 1px solid $primary;
-        animation: sera-pulse $animation-arrow-header-time $animation-arrow-header-type infinite alternate;
-      }
-
-      // Background
-      &:after {
-        transition: background-color $transition-links $transition-links-type;
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-
-      &:hover {
-        i {
-          transform: scale(1.3);
-        }
-
-        &:after {
-          background-color: rgba(255, 255, 255, 0.3);
-        }
-      }
-
-      i {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform $transition-links $transition-links-type;
-
-        &:before {
-          width: 100%;
-          height: 100%;
-        }
-      }
+    .wrapper-arrow {
+      animation: bounceDownUp 1.5s infinite;
+      animation-delay: 6s;
     }
   }
 

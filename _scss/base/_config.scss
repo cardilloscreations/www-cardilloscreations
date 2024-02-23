@@ -1,0 +1,36 @@
+/**
+ *  Config Style
+ **/
+
+// Animations Timing
+$transition-links: 300ms;
+
+// Animations Types
+$transition-links-type: ease-in-out;
+
+// Mobile Menu Settings
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+$menuItems: 12;
+
+// Common Offsets
+$mobile-break: 768px;
+$mobile-break-xs: 430px;
+$section-top-space: 2.0em;
+$section-side-space: 0.5em;
+$navbar-offset-mobile: 70px;
+$navbar-offset-full: 70px;
+
+$arrow-down-height: 2.5em;
+$heading-content-offset: 5em;
+
+@mixin hero-height() {
+    // Hero height when smaller than mobile break
+    @media (max-width: $mobile-break) {
+        height: calc(100vh - #{$navbar-offset-mobile});
+    }
+
+    // Hero height when larger than mobile break
+    @media (min-width: $mobile-break) {
+        height: calc(100vh - #{$navbar-offset-full});
+    }
+}

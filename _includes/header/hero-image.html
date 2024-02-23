@@ -1,0 +1,6 @@
+<picture>
+    <source media="(orientation:portrait) and (max-width: 767.98px)" srcset="{% link {{ site.images_path }}/header-image.port.sm.webp %}">
+    <source media="(orientation:portrait) and (min-width: 768px)" srcset="{% link {{ site.images_path }}/header-image.port.md.webp %}">
+    <source media="(orientation:landscape)" srcset="{% link {{ site.images_path }}/header-image.land.webp %}">
+    <img src="{% link {{ site.images_path }}/header-image.land.webp %}" alt="{{ site.header-title }}" fetchpriority="high">
+</picture>

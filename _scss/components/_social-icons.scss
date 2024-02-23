@@ -1,35 +1,63 @@
 /**
- *
  *  Social Icons Style
- *
- *  @package ohkimur_components
- *
  **/
 
 .social-icons {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 1.5em;
 
-  ul.icons {
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    &.global-text-color-icons {
+    sup {
+      font-size: 50%;
+      vertical-align: super;
+    }
+
+    &.icons {
       li {
-        a {
-          color: $global-text;
+        padding: 0.3em 0;
 
-          &:hover {
-            color: $primary;
+        a {
+          img {
+            height: 1.6em;
+            width: 1.6em;
+            opacity: 0.7;
+
+            &:hover {
+              opacity: 0.9;
+            }
           }
         }
       }
     }
 
-    li {
-      float: left;
-      margin-right: 15px;
+  }
 
-      &:last-child {
-        margin-right: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &.icons {
+      li {
+        float: left;
+        padding: 0 0.5em;
+
+        a {
+          img {
+            height: 1.5em;
+            width: 1.5em;
+            opacity: 0.7;
+            filter: invert(1.0);
+
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
       }
     }
   }

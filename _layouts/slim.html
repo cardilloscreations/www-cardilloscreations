@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body>
 
-  <!-- Page Loader -->
-  <div id="page-loader" class="page-loader"><span class="load-icon"></span></div>
+    {%- include header/nav-bar.html -%}
 
-  {% include header/header-slim.html %}
+    {% include header/header-slim.html %}
 
-  <!-- Page Section -->
-  <section class="site-section page-layout" id="start">
-    <div class="container">
+    <section class="site-section page-layout" id="start">
+      <div class="container">
 
-      <!-- Page Layout -->
-      {{ content }}
+        {{ content }}
 
-    </div>
-  </section>
+      </div>
+    </section>
 
-  {% include footer.html %}
+    {% include footer.html %}
 
-  {% include scripts.html %}
+    {%- include scripts/ext-scripts.html -%}
 
-</body>
+  </body>
 
 </html>

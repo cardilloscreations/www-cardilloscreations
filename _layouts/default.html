@@ -1,21 +1,23 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-  {% include head.html %}
+{%- capture preloadLines -%}
+<link rel="preload" href="{% link {{ site.images_path }}/header-image.slim.webp %}" as="image" type="image/webp" fetchpriority="high">
+{%- endcapture -%}
+{%- include head.html preloadLines=preloadLines -%}
 
-  <body>
+<body>
 
-    <!-- Page Loader -->
-    <div id="page-loader" class="page-loader"><span class="load-icon"></span></div>
+  {%- include header/nav-bar.html -%}
 
-    {% include header/header-site.html %}
+  {%- include header/header-slim.html -%}
 
-    {{ content }}
+  {{- content -}}
 
-    {% include footer.html %}
+  {%- include footer.html -%}
 
-    {% include scripts.html %}
+  {%- include scripts/ext-scripts.html -%}
 
-  </body>
+</body>
 
 </html>
