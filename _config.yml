@@ -72,7 +72,7 @@ tiktok: "https://www.tiktok.com/@cardilloscreations"
 ##
 ## Global Images
 ##
-image: default.webp
+default-image: default.webp
 link-icon: icons/facebook.svg
 facebook-icon: icons/facebook.svg
 instagram-icon: icons/instagram.svg

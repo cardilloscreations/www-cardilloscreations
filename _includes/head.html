@@ -71,7 +71,7 @@
   {%- if page.image -%}
   <meta property="og:image" content="{{ page.image }}?{{ site.time | date: '%s' }}">
   {%- else -%}
-  <meta property="og:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.image }} -%}?{{ site.time | date: '%s' }}">
+  <meta property="og:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.default-image }} -%}?{{ site.time | date: '%s' }}">
   {%- endif -%}
   {%- if page.youtubeid -%}
   <meta property="og:video" content="https://youtu.be/{{ page.youtubeid }}">
@@ -87,7 +87,7 @@
   {%- if page.image -%}
   <meta name="twitter:image" content="{{ page.image }}?{{ site.time | date: '%s' }}">
   {%- else -%}
-  <meta property="twitter:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.image }} -%}?{{ site.time | date: '%s' }}">
+  <meta property="twitter:image" content="{{ site.url }}{%- link {{ site.images_path }}/{{ site.default-image }} -%}?{{ site.time | date: '%s' }}">
   {%- endif -%}
 
   {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
