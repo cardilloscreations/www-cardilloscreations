@@ -73,16 +73,16 @@ tiktok: "https://www.tiktok.com/@cardilloscreations"
 ## Global Images
 ##
 default-image: default.webp
-link-icon: icons/facebook.svg
+link-icon: icons/link.svg
+email-icon: icons/email.svg
+shop-icon: icons/shop.svg
 facebook-icon: icons/facebook.svg
 instagram-icon: icons/instagram.svg
 twitterx-icon: icons/twitterx.svg
 tiktok-icon: icons/tiktok.svg
 youtube-icon: icons/youtube.svg
 linkedin-icon: icons/linkedin.svg
-email-icon: icons/email.svg
 pinterest-icon: icons/pinterest.svg
-shop-icon: icons/shop.svg
 amazon-icon: icons/amazon.svg
 acast-icon: icons/acast.svg
 spotify-icon: icons/spotify.svg
@@ -99,6 +99,14 @@ portfolio:
     ext-name: "YouTube"
     ext-icon: "youtube.svg"
     ext-url: "https://www.youtube.com/@ThisMidlifeHustle"
+
+  # Portfolio Item
+  - title: <b>C</b>ire <b>A</b>rtistry
+    image: cire-artistry.webp
+    url: "https://cireartistry.com"
+    ext-name: "Etsy"
+    ext-icon: "shopping.svg"
+    ext-url: "https://www.etsy.com/shop/cireartistry"
 
   # Portfolio Item
   - title: <b>B</b>inaural <b>B</b>eat </b>B</b>ank
@@ -144,9 +152,6 @@ portfolio:
   - title: <b>M</b>r <b>M</b>ighty's <b>F</b>ine <b>D</b>esigns
     image: mmfd.webp
     url: "https://mrmightysfinedesigns.com"
-    ext-name: "Etsy"
-    ext-icon: "shopping.svg"
-    ext-url: "https://www.etsy.com/shop/MrMightysFineDesigns"
 
 ##
 ## Footer
