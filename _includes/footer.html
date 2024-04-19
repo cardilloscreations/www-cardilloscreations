@@ -1,47 +1,45 @@
-<footer class="site-footer" id="footer">
+<footer class="site-footer container-fluid" id="footer">
 
-  <div class="d-flex-column justify-content-center">
-    <div class="footer-info">
-
-      <div class="footer-info-text">
-        <p>{{ site.footer-description }}</p>
+  <div class="justify-content-center">
+    <div class="row">
+      <div class="footer-info">
+        <div class="footer-info-text">
+          <p>{{ site.footer-description }}</p>
+        </div>
+        <div class="social-icons">
+          <ul class="icons">
+            <li><a href="{{ site.facebook }}" aria-label="Facebook" target="_blank">
+                <img src="{% link {{ site.images_path }}/{{ site.facebook-icon }} %}" alt="Facebook" height="100" width="100">
+              </a></li>
+            <li><a href="{{ site.instagram }}" aria-label="Instagram" target="_blank">
+                <img src="{% link {{ site.images_path }}/{{ site.instagram-icon }} %}" alt="Instagram" height="100" width="100">
+              </a></li>
+            <li><a href="{{ site.tiktok }}" aria-label="TikTok" target="_blank">
+                <img src="{% link {{ site.images_path }}/{{ site.tiktok-icon }} %}" alt="TikTok" height="100" width="100">
+              </a></li>
+            <li><a href="{{ site.youtube }}" aria-label="YouTube" target="_blank">
+                <img src="{% link {{ site.images_path }}/{{ site.youtube-icon }} %}" alt="YouTube" height="100" width="100">
+              </a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="social-icons">
-        <ul class="icons">
-          <li><a href="{{ site.facebook }}" aria-label="Facebook" target="_blank">
-              <img src="{% link {{ site.images_path }}/{{ site.facebook-icon }} %}" alt="Facebook" height="100" width="100">
-            </a></li>
-          <li><a href="{{ site.instagram }}" aria-label="Instagram" target="_blank">
-              <img src="{% link {{ site.images_path }}/{{ site.instagram-icon }} %}" alt="Instagram" height="100" width="100">
-            </a></li>
-          <li><a href="{{ site.tiktok }}" aria-label="TikTok" target="_blank">
-              <img src="{% link {{ site.images_path }}/{{ site.tiktok-icon }} %}" alt="TikTok" height="100" width="100">
-            </a></li>
-          <li><a href="{{ site.youtube }}" aria-label="YouTube" target="_blank">
-              <img src="{% link {{ site.images_path }}/{{ site.youtube-icon }} %}" alt="YouTube" height="100" width="100">
-            </a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-legal">
-      <div class="footer-text">
-        <p class="d-flex flex-column flex-sm-row text-center justify-content-center">
-          <a class="pb-1 pb-sm-0" href="{% link legal/privacy.html %}">
-            Privacy Policy
-          </a>
-          <span class="d-none d-sm-block px-3 fw-semibold" aria-disabled="true">|</span>
-          <a class="pb-1 pb-sm-0" href="{% link legal/terms.html %}">
-            Terms of Use
-          </a>
-        </p>
-        <p class="d-flex flex-column flex-sm-row text-center justify-content-center">
-          <span>Copyright &copy; {{ site.footer-copyright-year }}</span>
-          <span class="d-none d-sm-block">&nbsp;</span>
-          <span>by {{ site.footer-copyright-text }}</span>
-        </p>
+      <div class="footer-legal">
+        <div class="footer-text">
+          <p class="d-flex flex-column flex-sm-row text-center justify-content-center">
+            <a class="pb-1 pb-sm-0" href="{% link legal/privacy.html %}">
+              Privacy Policy
+            </a>
+            <span class="d-none d-sm-block px-3 fw-semibold" aria-disabled="true">|</span>
+            <a class="pb-1 pb-sm-0" href="{% link legal/terms.html %}">
+              Terms of Use
+            </a>
+          </p>
+          <p class="d-flex flex-column flex-sm-row text-center justify-content-center">
+            <span>Copyright &copy; {{ site.footer-copyright-year }}</span>
+            <span class="d-none d-sm-block">&nbsp;</span>
+            <span>by {{ site.footer-copyright-text }}</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
