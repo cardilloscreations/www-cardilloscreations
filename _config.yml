@@ -47,27 +47,29 @@ images_path:  assets/images
 title: Cardillo's Creations
 # This is the site description - must be between 25 and 160 characters for Bing SEO
 description: >
-  Cardillo's Creations is a woman owned small business that pursues
-  online business opportunities and shares information on their podcast.
+  Cardillo's Creations makes limited edition gifts and custom wares.
+  Every item is designed and handmade with care and attention to detail.
+
 
 # Website language
 lang: en-US
 # Header Title
 header-title: Cardillo's Creations
 # Header Tagline
-header-tagline: Lisa & Ray Cardillo's Creative Pursuits
+header-tagline: Unique Gifts and Custom Wares
 
 # The general contact default email address
 email: hello@cardilloscreations.com
 
 ##
-## Global Social Links
+## Global Links
 ##
 youtube: "https://www.youtube.com/@CardillosCreations"
 facebook: "https://www.facebook.com/CardillosCreations/"
 instagram: "https://www.instagram.com/cardilloscreations/"
 twitter: "https://twitter.com/CardilloCreates"
 tiktok: "https://www.tiktok.com/@cardilloscreations"
+etsy: "https://www.etsy.com/shop/CardillosCreations"
 
 ##
 ## Global Images
@@ -84,78 +86,10 @@ youtube-icon: icons/youtube.svg
 linkedin-icon: icons/linkedin.svg
 pinterest-icon: icons/pinterest.svg
 amazon-icon: icons/amazon.svg
-acast-icon: icons/acast.svg
-spotify-icon: icons/spotify.svg
-applepodcasts-icon: icons/applepodcasts.svg
-
-##
-## Portfolio Grid
-##
-portfolio:
-  # Portfolio Item
-  - title: <b>T</b>his <b>M</b>idlife <b>H</b>ustle
-    image: this-midlife-hustle.webp
-    url: "https://thismidlifehustle.com"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@ThisMidlifeHustle"
-
-  # Portfolio Item
-  - title: <b>C</b>ire <b>A</b>rtistry
-    image: cire-artistry.webp
-    url: "https://cireartistry.com"
-    ext-name: "Etsy"
-    ext-icon: "shopping.svg"
-    ext-url: "https://www.etsy.com/shop/cireartistry"
-
-  # Portfolio Item
-  - title: <b>B</b>inaural <b>B</b>eat </b>B</b>ank
-    image: binaural-beat-bank.webp
-    url: "https://binauralbeatbank.com"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@BinauralBeatBank"
-
-  # Portfolio Item
-  - title: <b>S</b>itcom <b>S</b>leepers
-    image: sitcom-sleepers.webp
-    url: "https://sitcomsleepers.com"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@SitcomSleepers"
-
-  # Portfolio Item
-  - title: <b>L</b>ong <b>T</b>ooth <b>G</b>amer
-    image: long-tooth-gamer.webp
-    url: "https://longtoothgamer.com"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@LongToothGamer"
-
-  # Portfolio Item
-  - title: <b>L</b>isa <b>L</b>affs
-    image: lisa-laffs.webp
-    url: "https://lisalaffs.com"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@LisaLaffsLOL"
-
-  # Portfolio Item
-  - title: <b>C</b>ardillo's <b>A</b>rt
-    image: cardillos-art.webp
-    url: "https://cardillos.art"
-    ext-name: "YouTube"
-    ext-icon: "youtube.svg"
-    ext-url: "https://www.youtube.com/@Cardillos-Art"
-
-  # Portfolio Item
-  - title: <b>M</b>r <b>M</b>ighty's <b>F</b>ine <b>D</b>esigns
-    image: mmfd.webp
-    url: "https://mrmightysfinedesigns.com"
 
 ##
 ## Footer
 ##
 footer-description: Find us on social media.
 footer-copyright-text: Cardillo's Creations, LLC
-footer-copyright-year: 2021
+footer-copyright-year: 2024
